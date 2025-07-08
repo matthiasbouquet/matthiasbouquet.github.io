@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hedge Fund Secrets | Elite Trading Education</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e3a8a',
+                        secondary: '#f59e0b',
+                        dark: '#111827',
+                        light: '#f3f4f6',
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+        }
+        .testimonial-card {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+        .faq-item {
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+        }
+        .faq-question {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .faq-question:hover {
+            color: #f59e0b;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .faq-answer.active {
+            max-height: 300px;
+        }
+        .glow {
+            box-shadow: 0 0 15px rgba(245, 158, 11, 0.5);
+        }
+        .hover-grow {
+            transition: all 0.3s ease;
+        }
+        .hover-grow:hover {
+            transform: scale(1.05);
+        }
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+        .social-icon:hover {
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-chart-line text-primary text-3xl mr-2"></i>
+                        <span class="text-xl font-bold text-primary">Hedge Fund Secrets</span>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-4">
+                        <a href="#program" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Program</a>
+                        <a href="#features" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Features</a>
+                        <a href="#cheatsheet" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Cheatsheet</a>
+                        <a href="#testimonials" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Testimonials</a>
+                        <a href="#faq" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">FAQ</a>
+                        <a href="#contact" class="bg-primary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition duration-300">Book a Call</a>
+                    </div>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-primary focus:outline-none" id="mobile-menu-button">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden bg-white border-t" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#features" class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Features</a>
+                <a href="#cheatsheet" class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Cheatsheet</a>
+                <a href="#testimonials" class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Testimonials</a>
+                <a href="#faq" class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">FAQ</a>
+                <a href="#contact" class="bg-primary text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-blue-700 transition duration-300">Book a Call</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-gradient text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">Unlock <span class="text-secondary">Hedge Fund Trading Strategies</span> for Consistent Profits</h1>
+                    <p class="text-lg md:text-xl mb-8 text-gray-300">8 years of JP Morgan experience distilled into actionable trading insights. No fluff, just real strategies that work.</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="bg-secondary hover:bg-yellow-500 text-dark font-bold py-3 px-6 rounded-lg text-center transition duration-300 hover-grow">
+                            Book Free Strategy Call
+                        </a>
+                        <a href="#newsletter" class="bg-transparent border-2 border-white hover:bg-white hover:text-dark font-bold py-3 px-6 rounded-lg text-center transition duration-300 hover-grow">
+                            Join Our Newsletter
+                        </a>
+                    </div>
+                    <div class="mt-8 flex items-center">
+                        <div class="flex -space-x-2">
+                            <img class="inline-block h-10 w-10 rounded-full ring-2 ring-white" src="https://randomuser.me/api/portraits/women/12.jpg" alt="">
+                            <img class="inline-block h-10 w-10 rounded-full ring-2 ring-white" src="https://randomuser.me/api/portraits/men/32.jpg" alt="">
+                            <img class="inline-block h-10 w-10 rounded-full ring-2 ring-white" src="https://randomuser.me/api/portraits/women/45.jpg" alt="">
+                        </div>
+                        <p class="ml-4 text-gray-300">Join <span class="font-bold text-white">dozens</span> oftraders who've transformed their results</p>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 glow hover-grow transition duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-secondary rounded-full p-2 mr-3">
+                                <i class="fas fa-chart-pie text-dark text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">Recent Trade Example</h3>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <p class="text-gray-300 text-sm">Strategy</p>
+                                <p class="font-bold">Short 1W Iron Condor</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-300 text-sm">Underlying</p>
+                                <p class="font-bold">S&P (ES)</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-300 text-sm">Premium (30 contracts)</p>
+                                <p class="font-bold">$30,200</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-300 text-sm">Profit Target</p>
+                                <p class="font-bold text-secondary">$20,000</p>
+                            </div>
+                        </div>
+                        <div class="bg-dark rounded-lg p-4">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-sm">Expected Probability of Profit</span>
+                                <span class="text-sm font-bold">66%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2.5">
+                                <div class="bg-secondary h-2.5 rounded-full" style="width: 66%"></div>
+                            </div>
+                        </div>
+                        <p class="mt-4 text-sm text-gray-300 italic">"This is the type of trade we analyze in our premium membership - high probability, defined risk strategies."</p>
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 bg-primary rounded-lg p-4 w-32 h-32 flex items-center justify-center z-0 opacity-20"></div>
+                    <div class="absolute -top-6 -right-6 bg-secondary rounded-lg p-4 w-32 h-32 flex items-center justify-center z-0 opacity-20"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bio Section -->
+    <div class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-5 gap-12 items-center">
+                <div class="md:col-span-2 flex justify-center">
+                    <div class="relative">
+                        <img src="images/MB_canary_wharf.jpg?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Matthias Bouquet, PhD" class="rounded-xl shadow-xl w-full max-w-md">
+                        <div class="absolute -bottom-4 -right-4 bg-secondary p-4 rounded-lg shadow-lg">
+                            <div class="bg-white p-2 rounded">
+                                <i class="fas fa-graduation-cap text-3xl text-dark"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:col-span-3">
+                    <h2 class="text-3xl font-bold mb-4">About <span class="text-primary">Matthias Bouquet, PhD</span></h2>
+                    <p class="text-lg mb-6">With over 15 years of experience in quantitative finance and options trading, I bring a unique combination of academic rigor and real-world trading expertise to help you navigate the markets.</p>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-xl font-bold mb-3 text-primary">My Qualifications:</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mt-1 mr-3"></i>
+                                <span><strong>PhD in Applied Mathematics</strong>, graduate from elite French school Ecole Centrale Paris</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mt-1 mr-3"></i>
+                                <span><strong>8 years at JP Morgan</strong> as a derivatives strategist, advising hedge funds and institutional clients</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mt-1 mr-3"></i>
+                                <span><strong>Traded futures and options</strong> at various hedge funds</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mt-1 mr-3"></i>
+                                <span><strong>Published</strong> industry-leading research in derivatives modelling and trading strategies</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mt-1 mr-3"></i>
+                                <span><strong>Mentored dozens of traders</strong> to develop profitable, risk-managed trading approaches</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-bold mb-3 text-primary">Connect With Me:</h3>
+                        <div class="flex space-x-4">
+                            <a href="https://www.linkedin.com/in/matthias-bouquet-418805197/" target="_blank" class="social-icon bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700">
+                                <i class="fab fa-linkedin-in text-xl"></i>
+                            </a>
+                            <a href="https://www.instagram.com/matthias.bouquet?igsh=MThiazh1c2w2eHhycw%3D%3D&utm_source=qr" target="_blank" class="social-icon bg-gradient-to-r from-purple-500 to-pink-500 text-white p-3 rounded-full hover:from-purple-600 hover:to-pink-600">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Trust Badges -->
+    <div class="bg-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-center">
+                <div class="flex flex-col items-center">
+                    <i class="fas fa-medal text-4xl text-secondary mb-2"></i>
+                    <p class="text-sm font-bold text-center">15+ Years Wall Street Experience</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i class="fas fa-user-graduate text-4xl text-primary mb-2"></i>
+                    <p class="text-sm font-bold text-center">Hundreds of Traders Educated</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i class="fas fa-star text-4xl text-secondary mb-2"></i>
+                    <p class="text-sm font-bold text-center">Real Trading Strategies</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i class="fas fa-hand-holding-usd text-4xl text-primary mb-2"></i>
+                    <p class="text-sm font-bold text-center">Hands-On Coaching</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cheatsheet Section -->
+    <div id="cheatsheet" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Free Options Trading Cheatsheet</h2>
+                <p class="text-lg max-w-3xl mx-auto text-gray-600">Download our beautifully designed cheatsheet covering all the essentials of options trading</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden hover-grow transition duration-300">
+                    <div class="aspect-w-3 aspect-h-4">
+                        <img src="images/rock_climb_edit.jpg" alt="Options Trading Cheatsheet Preview" class="object-cover w-full h-full">
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">What's Included:</h3>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-3"></i>
+                            <span>Basic option strategies with profit/loss diagrams</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-3"></i>
+                            <span>Explanation of the Greeks (Delta, Gamma, Theta, Vega)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-3"></i>
+                            <span>Black-Scholes formula breakdown</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-3"></i>
+                            <span>Risk management principles</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-3"></i>
+                            <span>Common mistakes to avoid</span>
+                        </li>
+                    </ul>
+                    <button id="open-subscribe-modal" type="button" class="w-full bg-secondary hover:bg-yellow-500 text-dark font-bold py-3 px-6 rounded-lg transition duration-300">
+                        Get Instant Access
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Options Trading Mastery Program -->
+    <div id="program" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 text-primary">Options Trading Mastery</h2>
+                <p class="text-lg max-w-3xl mx-auto text-gray-600">A personalized 8-week coaching program for aspiring traders ready to master options and futures with expert guidance.</p>
+            </div>
+            
+            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
+                <!-- Week 1 -->
+                <div class="bg-gray-50 rounded-2xl shadow-lg p-6 hover-grow transition duration-300">
+                    <h3 class="text-xl font-semibold text-primary mb-2">Week 1: The Institutional Foundation</h3>
+                    <p class="text-sm mb-4 text-gray-600">Mindset, market structure, and how pros approach trading.</p>
+                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                        <li>Market mechanics & framework</li>
+                        <li>Institutional mindset & strategy</li>
+                        <li>Personalized trading blueprint</li>
+                    </ul>
+                </div>
+
+                <!-- Week 2 -->
+                <div class="bg-gray-50 rounded-2xl shadow-lg p-6 hover-grow transition duration-300">
+                    <h3 class="text-xl font-semibold text-primary mb-2">Week 2: Options Decoded</h3>
+                    <p class="text-sm mb-4 text-gray-600">Greeks, volatility, and how to think in terms of edge.</p>
+                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                        <li>Delta, Gamma, Vega, Theta</li>
+                        <li>IV vs HV & skew analysis</li>
+                        <li>Volatility-based positioning</li>
+                    </ul>
+                </div>
+
+                <!-- Week 3 -->
+                <div class="bg-gray-50 rounded-2xl shadow-lg p-6 hover-grow transition duration-300">
+                    <h3 class="text-xl font-semibold text-primary mb-2">Week 3: Directional Trading</h3>
+                    <p class="text-sm mb-4 text-gray-600">When to go long or short with options.</p>
+                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                        <li>Calls, puts & vertical spreads</li>
+                        <li>Trade journaling techniques</li>
+                        <li>Entry/exit frameworks</li>
+                    </ul>
+                </div>
+
+                <!-- Week 4 -->
+                <div class="bg-gray-50 rounded-2xl shadow-lg p-6 hover-grow transition duration-300">
+                    <h3 class="text-xl font-semibold text-primary mb-2">Week 4: Futures & Global Markets</h3>
+                    <p class="text-sm mb-4 text-gray-600">Trading commodities, FX, and indices.</p>
+                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                        <li>Futures mechanics & risk</li>
+                        <li>Cross-asset correlation use</li>
+                        <li>Building theses across markets</li>
+                    </ul>
+                </div>
+
+                <!-- Week 5 -->
+                <div class="bg-gray-50 rounded-2xl shadow-lg p-6 hover-grow transition duration-300">
+                    <h3 class="text-xl font-semibold text-primary mb-2">Week 5: Spread Strategies</h3>
+                    <p class="text-sm mb-4 text-gray-600">Risk-controlled strategies with defined edges.</p>
+                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                        <li>Iron Condors, Butterflies, Calendars</li>
+                        <li>Probability & payoff analysis</li>
+                        <li>Choosing trades based on setup</li>
+                    </ul>
+                </div>
+
+                <!-- Week 6 -->
+                <div class="bg-gray-50 rounded-2xl shadow-lg p-6 hover-grow transition duration-300">
+                    <h3 class="text-xl font-semibold text-primary mb-2">Week 6: Risk & Psychology</h3>
+                    <p class="text-sm mb-4 text-gray-600">Risk management and the mental game of trading.</p>
+                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                        <li>Capital management & trade sizing</li>
+                        <li>Emotion-proofing your process</li>
+                        <li>Institutional-style risk frameworks</li>
+                    </ul>
+                </div>
+
+                <!-- Week 7 -->
+                <div class="bg-gray-50 rounded-2xl shadow-lg p-6 hover-grow transition duration-300">
+                    <h3 class="text-xl font-semibold text-primary mb-2">Week 7: Advanced Tactics</h3>
+                    <p class="text-sm mb-4 text-gray-600">Volatility events and market-neutral plays.</p>
+                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                        <li>Earnings & IV crush trades</li>
+                        <li>Skew exploitation</li>
+                        <li>Non-directional setups</li>
+                    </ul>
+                </div>
+
+                <!-- Week 8 -->
+                <div class="bg-gray-50 rounded-2xl shadow-lg p-6 hover-grow transition duration-300">
+                    <h3 class="text-xl font-semibold text-primary mb-2">Week 8: Mastery Review</h3>
+                    <p class="text-sm mb-4 text-gray-600">Bring it all together and build your blueprint.</p>
+                    <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                        <li>Trade review & performance feedback</li>
+                        <li>Personalized checklist creation</li>
+                        <li>Next steps & scaling your edge</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <a href="#contact" class="inline-block bg-primary hover:bg-blue-700 text-white text-lg font-semibold py-3 px-8 rounded-xl transition duration-300 hover-grow">
+                    Apply Now
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div id="features" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Why We're Different</h2>
+                <p class="text-lg max-w-3xl mx-auto text-gray-600">Unlike trading "gurus" selling get-rich-quick schemes, we provide institutional-grade education based on real hedge fund strategies.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md hover-grow transition duration-300">
+                    <div class="feature-icon bg-primary/10 text-primary mx-auto">
+                        <i class="fas fa-university text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center">Institutional Knowledge</h3>
+                    <p class="text-gray-600">Learn the exact strategies I used during my 8 years at JP Morgan, adapted for retail traders.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md hover-grow transition duration-300">
+                    <div class="feature-icon bg-secondary/10 text-secondary mx-auto">
+                        <i class="fas fa-filter text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center">No Fluff, Just Results</h3>
+                    <p class="text-gray-600">We cut through the noise and focus only on what actually works in today's markets.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md hover-grow transition duration-300">
+                    <div class="feature-icon bg-primary/10 text-primary mx-auto">
+                        <i class="fas fa-chart-bar text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center">Options Focus</h3>
+                    <p class="text-gray-600">Specialized education in options trading strategies that hedge funds actually use.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md hover-grow transition duration-300">
+                    <div class="feature-icon bg-secondary/10 text-secondary mx-auto">
+                        <i class="fas fa-shield-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center">Risk Management First</h3>
+                    <p class="text-gray-600">Learn to protect your capital like the pros - the foundation of all successful trading.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md hover-grow transition duration-300">
+                    <div class="feature-icon bg-primary/10 text-primary mx-auto">
+                        <i class="fas fa-users text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center">Community Support</h3>
+                    <p class="text-gray-600">Access to our private community of serious traders sharing ideas and strategies.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md hover-grow transition duration-300">
+                    <div class="feature-icon bg-secondary/10 text-secondary mx-auto">
+                        <i class="fas fa-book-open text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center">Continuous Education</h3>
+                    <p class="text-gray-600">Weekly market analysis, strategy updates, and Q&A sessions to keep you ahead.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials -->
+    <div id="testimonials" class="py-16 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">What Our Members Say</h2>
+                <p class="text-lg max-w-3xl mx-auto text-gray-300">Don't just take our word for it - hear from traders who've transformed their results with our strategies.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-xl testimonial-card border border-white/20">
+                    <div class="flex items-center mb-4">
+                        <img class="w-12 h-12 rounded-full mr-4" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Robert K.">
+                        <div>
+                            <h4 class="font-bold">Robert K.</h4>
+                            <div class="flex text-secondary">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic">"After years of struggling with options, I finally found a system that works. The risk management framework alone was worth the investment. My account is up 37% this year."</p>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-xl testimonial-card border border-white/20">
+                    <div class="flex items-center mb-4">
+                        <img class="w-12 h-12 rounded-full mr-4" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah L.">
+                        <div>
+                            <h4 class="font-bold">Sarah L.</h4>
+                            <div class="flex text-secondary">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic">"The institutional perspective is game-changing. I can now spot opportunities that most retail traders miss. The weekly trade ideas have consistently outperformed my previous strategies."</p>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-xl testimonial-card border border-white/20">
+                    <div class="flex items-center mb-4">
+                        <img class="w-12 h-12 rounded-full mr-4" src="https://randomuser.me/api/portraits/men/75.jpg" alt="Michael T.">
+                        <div>
+                            <h4 class="font-bold">Michael T.</h4>
+                            <div class="flex text-secondary">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic">"Finally, an educator who actually traded professionally! The difference in quality compared to YouTube 'gurus' is night and day. My consistency has improved dramatically."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Newsletter -->
+    <div id="newsletter" class="py-16 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 bg-white rounded-xl shadow-md overflow-hidden p-8">
+            <div class="md:flex">
+                <div class="md:flex-shrink-0 md:w-1/3 bg-primary/10 flex items-center justify-center p-8">
+                    <i class="fas fa-envelope-open-text text-6xl text-primary"></i>
+                </div>
+                <div class="p-8 md:w-2/3">
+                    <h2 class="text-2xl font-bold mb-2">Get Our Free Options Trading Guide</h2>
+                    <p class="text-gray-600 mb-6">Join our newsletter and receive our exclusive 20-page guide: "3 Hedge Fund Options Strategies Anyone Can Use"</p>
+                    <form class="space-y-4">
+                        <div>
+                            <input type="email" placeholder="Your best email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary">
+                        </div>
+                        <button type="submit" class="w-full bg-secondary hover:bg-yellow-500 text-dark font-bold py-3 px-6 rounded-lg transition duration-300">
+                            Get Instant Access
+                        </button>
+                        <p class="text-sm text-gray-500">We respect your privacy. Unsubscribe at any time.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ -->
+    <div id="faq" class="py-16 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+                <p class="text-lg text-gray-600">Everything you need to know about Hedge Fund Secrets</p>
+            </div>
+            
+            <div class="space-y-6">
+                <div class="faq-item">
+                    <div class="faq-question flex justify-between items-center" onclick="toggleFaq(1)">
+                        <h3 class="text-lg font-bold">What makes your approach different from other trading educators?</h3>
+                        <i class="fas fa-chevron-down text-primary"></i>
+                    </div>
+                    <div class="faq-answer mt-2 text-gray-600" id="faq-answer-1">
+                        <p>Most trading educators have never worked at a professional trading desk. With 8 years at JP Morgan, I bring actual institutional knowledge that's been battle-tested in real markets. We focus on risk-adjusted returns rather than get-rich-quick schemes, teaching strategies that hedge funds actually use to generate consistent profits.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question flex justify-between items-center" onclick="toggleFaq(2)">
+                        <h3 class="text-lg font-bold">Is this suitable for beginners?</h3>
+                        <i class="fas fa-chevron-down text-primary"></i>
+                    </div>
+                    <div class="faq-answer mt-2 text-gray-600" id="faq-answer-2">
+                        <p>We have educational materials for all levels. While some of our advanced strategies require options knowledge, we provide comprehensive foundational training to get you up to speed. Many of our members started as complete beginners and now trade confidently using our framework.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question flex justify-between items-center" onclick="toggleFaq(3)">
+                        <h3 class="text-lg font-bold">How much time does this require?</h3>
+                        <i class="fas fa-chevron-down text-primary"></i>
+                    </div>
+                    <div class="faq-answer mt-2 text-gray-600" id="faq-answer-3">
+                        <p>Our strategies are designed for busy professionals. The initial learning phase might require 5-10 hours per week, but once you're up to speed, most members spend just 1-2 hours per week managing their trades. We provide clear checklists and systems to make the process efficient.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question flex justify-between items-center" onclick="toggleFaq(4)">
+                        <h3 class="text-lg font-bold">What's the minimum account size needed?</h3>
+                        <i class="fas fa-chevron-down text-primary"></i>
+                    </div>
+                    <div class="faq-answer mt-2 text-gray-600" id="faq-answer-4">
+                        <p>While options trading can be done with smaller accounts, we recommend at least $5,000 to properly implement our risk management rules and trade the strategies effectively. That said, we provide guidance on position sizing for various account sizes.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question flex justify-between items-center" onclick="toggleFaq(5)">
+                        <h3 class="text-lg font-bold">Can I really make money with these strategies?</h3>
+                        <i class="fas fa-chevron-down text-primary"></i>
+                    </div>
+                    <div class="faq-answer mt-2 text-gray-600" id="faq-answer-5">
+                        <p>While past performance doesn't guarantee future results, our members have achieved excellent risk-adjusted returns. The key is consistency and proper risk management - we aim for steady gains rather than home runs. Our focus is on high-probability trades that work in various market conditions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cheatsheet PDF Modal -->
+    <div id="cheatsheet-pdf" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold">Options Trading Cheatsheet</h3>
+                    <button onclick="document.getElementById('cheatsheet-pdf').classList.add('hidden')" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times text-2xl"></i>
+                    </button>
+                </div>
+                
+                <!-- Cheatsheet Content -->
+                <div class="bg-gray-50 p-8 rounded-lg mb-6">
+                    <div class="text-center mb-8">
+                        <h1 class="text-3xl font-bold text-primary mb-2">Options Trading Cheatsheet</h1>
+                        <p class="text-secondary font-medium">Essential Concepts for Serious Traders</p>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8 mb-8">
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <h2 class="text-xl font-bold mb-4 text-primary border-b pb-2">Basic Strategies</h2>
+                            <div class="space-y-6">
+                                <div>
+                                    <h3 class="font-bold mb-2">Long Call</h3>
+                                    <div class="bg-gray-100 p-4 rounded-lg mb-2">
+                                        <img src="https://www.optionseducation.org/content/dam/oic/en/images/strategy/long-call.png" alt="Long Call P/L Diagram" class="w-full h-auto">
+                                    </div>
+                                    <p class="text-sm text-gray-600">Buy call option. Bullish strategy. Unlimited upside, limited risk.</p>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold mb-2">Long Put</h3>
+                                    <div class="bg-gray-100 p-4 rounded-lg mb-2">
+                                        <img src="https://www.optionseducation.org/content/dam/oic/en/images/strategy/long-put.png" alt="Long Put P/L Diagram" class="w-full h-auto">
+                                    </div>
+                                    <p class="text-sm text-gray-600">Buy put option. Bearish strategy. Large upside if stock falls, limited risk.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <h2 class="text-xl font-bold mb-4 text-primary border-b pb-2">Advanced Strategies</h2>
+                            <div class="space-y-6">
+                                <div>
+                                    <h3 class="font-bold mb-2">Iron Condor</h3>
+                                    <div class="bg-gray-100 p-4 rounded-lg mb-2">
+                                        <img src="https://www.optionseducation.org/content/dam/oic/en/images/strategy/iron-condor.png" alt="Iron Condor P/L Diagram" class="w-full h-auto">
+                                    </div>
+                                    <p class="text-sm text-gray-600">Sell OTM call & put, buy further OTM call & put. Benefits from low volatility.</p>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold mb-2">Butterfly Spread</h3>
+                                    <div class="bg-gray-100 p-4 rounded-lg mb-2">
+                                        <img src="https://www.optionseducation.org/content/dam/oic/en/images/strategy/long-call-butterfly.png" alt="Butterfly P/L Diagram" class="w-full h-auto">
+                                    </div>
+                                    <p class="text-sm text-gray-600">Combination of bull and bear spreads. Limited risk, limited profit potential.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-sm mb-8">
+                        <h2 class="text-xl font-bold mb-4 text-primary border-b pb-2">The Greeks</h2>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <div class="flex items-center mb-2">
+                                    <div class="bg-blue-100 text-blue-800 rounded-full w-8 h-8 flex items-center justify-center mr-3">
+                                        Δ
+                                    </div>
+                                    <h3 class="font-bold">Delta</h3>
+                                </div>
+                                <p class="text-sm text-gray-600 mb-2">Measures rate of change of option price relative to underlying asset price.</p>
+                                <p class="text-xs text-gray-500">Calls: 0 to +1 | Puts: -1 to 0</p>
+                            </div>
+                            <div>
+                                <div class="flex items-center mb-2">
+                                    <div class="bg-purple-100 text-purple-800 rounded-full w-8 h-8 flex items-center justify-center mr-3">
+                                        Γ
+                                    </div>
+                                    <h3 class="font-bold">Gamma</h3>
+                                </div>
+                                <p class="text-sm text-gray-600 mb-2">Measures rate of change of delta relative to underlying asset price.</p>
+                                <p class="text-xs text-gray-500">Highest for ATM options</p>
+                            </div>
+                            <div>
+                                <div class="flex items-center mb-2">
+                                    <div class="bg-yellow-100 text-yellow-800 rounded-full w-8 h-8 flex items-center justify-center mr-3">
+                                        Θ
+                                    </div>
+                                    <h3 class="font-bold">Theta</h3>
+                                </div>
+                                <p class="text-sm text-gray-600 mb-2">Measures rate of change of option price relative to time decay.</p>
+                                <p class="text-xs text-gray-500">Works for option sellers</p>
+                            </div>
+                            <div>
+                                <div class="flex items-center mb-2">
+                                    <div class="bg-green-100 text-green-800 rounded-full w-8 h-8 flex items-center justify-center mr-3">
+                                        ν
+                                    </div>
+                                    <h3 class="font-bold">Vega</h3>
+                                </div>
+                                <p class="text-sm text-gray-600 mb-2">Measures sensitivity to volatility. Higher vega = more volatility impact.</p>
+                                <p class="text-xs text-gray-500">Long options benefit from volatility</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h2 class="text-xl font-bold mb-4 text-primary border-b pb-2">Black-Scholes Formula</h2>
+                        <div class="flex flex-col md:flex-row gap-8 items-center">
+                            <div class="bg-gray-100 p-4 rounded-lg flex-1">
+                                <p class="font-mono text-sm mb-2">C = S<sub>0</sub>N(d<sub>1</sub>) - Ke<sup>-rT</sup>N(d<sub>2</sub>)</p>
+                                <p class="font-mono text-sm">P = Ke<sup>-rT</sup>N(-d<sub>2</sub>) - S<sub>0</sub>N(-d<sub>1</sub>)</p>
+                                <div class="mt-4 text-xs text-gray-600">
+                                    <p>Where:</p>
+                                    <p>d<sub>1</sub> = [ln(S<sub>0</sub>/K) + (r + σ²/2)T] / (σ√T)</p>
+                                    <p>d<sub>2</sub> = d<sub>1</sub> - σ√T</p>
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <table class="min-w-full text-sm">
+                                    <thead>
+                                        <tr class="bg-gray-100">
+                                            <th class="py-2 px-4 text-left">Variable</th>
+                                            <th class="py-2 px-4 text-left">Meaning</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="border-b">
+                                            <td class="py-2 px-4">C</td>
+                                            <td class="py-2 px-4">Call option price</td>
+                                        </tr>
+                                        <tr class="border-b">
+                                            <td class="py-2 px-4">P</td>
+                                            <td class="py-2 px-4">Put option price</td>
+                                        </tr>
+                                        <tr class="border-b">
+                                            <td class="py-2 px-4">S<sub>0</sub></td>
+                                            <td class="py-2 px-4">Current stock price</td>
+                                        </tr>
+                                        <tr class="border-b">
+                                            <td class="py-2 px-4">K</td>
+                                            <td class="py-2 px-4">Strike price</td>
+                                        </tr>
+                                        <tr class="border-b">
+                                            <td class="py-2 px-4">r</td>
+                                            <td class="py-2 px-4">Risk-free interest rate</td>
+                                        </tr>
+                                        <tr class="border-b">
+                                            <td class="py-2 px-4">T</td>
+                                            <td class="py-2 px-4">Time to expiration</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-2 px-4">σ</td>
+                                            <td class="py-2 px-4">Volatility of returns</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 text-center">
+                        <button onclick="window.print()" class="bg-primary hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg inline-flex items-center mr-4">
+                            <i class="fas fa-print mr-2"></i> Print
+                        </button>
+                        <button class="bg-secondary hover:bg-yellow-500 text-dark font-bold py-2 px-6 rounded-lg inline-flex items-center">
+                            <i class="fas fa-download mr-2"></i> Download PDF
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact/CTA -->
+    <div id="contact" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-primary rounded-2xl overflow-hidden shadow-xl">
+                <div class="grid md:grid-cols-2">
+                    <div class="p-12 text-white">
+                        <h2 class="text-3xl font-bold mb-4">Ready to Transform Your Trading?</h2>
+                        <p class="text-xl mb-6 text-gray-300">Book a free 30-minute strategy session where we'll:</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-secondary mr-3"></i>
+                                <span>Analyze your current trading approach</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-secondary mr-3"></i>
+                                <span>Identify your biggest opportunities</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-secondary mr-3"></i>
+                                <span>Show you how our strategies can help</span>
+                            </li>
+                        </ul>
+                        <div class="flex items-center">
+                            <i class="fas fa-calendar-alt text-2xl mr-4"></i>
+                            <div>
+                                <p class="font-bold">30-minute Zoom call</p>
+                                <p class="text-sm text-gray-300">Schedule at your convenience</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-12">
+                        <h3 class="text-2xl font-bold mb-6 text-dark text-center">Schedule Your Free 30-Minute Call</h3>
+                        <div class="calendly-inline-widget" data-url="https://calendly.com/matthias-bouquet/30min" style="min-width:320px;height:630px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-chart-line text-primary text-2xl mr-2"></i>
+                        <span class="text-xl font-bold">Hedge Fund Secrets</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Professional options trading education based on real hedge fund strategies.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="#cheatsheet" class="text-gray-400 hover:text-white">Cheatsheet</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Webinars</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Glossary</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-white">Testimonials</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="disclaimer.html" class="text-gray-400 hover:text-white">Disclaimer</a></li>
+                        <li><a href="privacy-policy.html" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-white">Terms of Service</a></li>
+                        <li><a href="refund-policy.html" class="text-gray-400 hover:text-white">Refund Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>© 2024 Hedge Fund Secrets. All rights reserved.</p>
+                <p class="mt-2 text-sm">This is not investment advice. Trading involves risk of loss.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Subscribe Modal (MailerLite) -->
+    <div id="subscribe-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-xl w-full max-w-md p-8 relative">
+            <button id="close-subscribe-modal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+            <h3 class="text-2xl font-bold mb-4 text-center">Subscribe to Our Newsletter</h3>
+            <form id="subscribe-form" class="space-y-4">
+                <input type="text" id="subscriber-name" name="name" placeholder="Your Name"
+                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary">
+                <input type="email" id="subscriber-email" name="email" placeholder="Your Email" required
+                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary">
+                <button type="submit" class="w-full bg-primary hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                    Subscribe
+                </button>
+                <p class="text-sm text-gray-500 text-center">We respect your privacy. Unsubscribe at any time.</p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // FAQ toggle
+        function toggleFaq(id) {
+            const answer = document.getElementById(`faq-answer-${id}`);
+            const icon = document.querySelector(`#faq-answer-${id}`).previousElementSibling.querySelector('i');
+            
+            answer.classList.toggle('active');
+            
+            if (answer.classList.contains('active')) {
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            } else {
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            }
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Open cheatsheet modal
+        document.querySelector('a[href="#cheatsheet-pdf"]').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('cheatsheet-pdf').classList.remove('hidden');
+        });
+
+        // Subscribe modal logic & MailerLite API call
+        const subscribeModal = document.getElementById('subscribe-modal');
+        const openSubscribeBtn = document.getElementById('open-subscribe-modal');
+        const closeSubscribeBtn = document.getElementById('close-subscribe-modal');
+
+        openSubscribeBtn.addEventListener('click', () => subscribeModal.classList.remove('hidden'));
+        closeSubscribeBtn.addEventListener('click', () => subscribeModal.classList.add('hidden'));
+
+        subscribeModal.addEventListener('click', (e) => {
+            if (e.target === subscribeModal) subscribeModal.classList.add('hidden');
+        });
+
+        // Handle form submission
+        const subscribeForm = document.getElementById('subscribe-form');
+        subscribeForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const name = document.getElementById('subscriber-name').value.trim();
+            const email = document.getElementById('subscriber-email').value.trim();
+            const apiKey = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiNzBmMjQwOTZjNGYxMTgwMDRhYzgzNzUyMGE5ZWNiMzZmZDhiZDQ1OTE5ZWI4NTk2MTZkOWQ1MzJmODA1NzY1OGVkNDVmYTFkODYyZGY1YTAiLCJpYXQiOjE3NTE5MDY4NTcuMTEwMzczLCJuYmYiOjE3NTE5MDY4NTcuMTEwMzc2LCJleHAiOjQ5MDc1ODA0NTcuMTA1NjkzLCJzdWIiOiIxNjUxMDk0Iiwic2NvcGVzIjpbXX0.qIiuSoX-CqA8YK5-iZreUdCXuzgc4M1I6DCLtx0tGDvWXXBIvAZzQAhewzTUJf_KQHdFQerLMN8GBMeC0q9wHDIss4v7iNmvmHu8gtk4fm6DNWnY3gQwtO3m3qjGCOLS_GP6FBqiBFAFn5PfZZKgbCR4jrYCGFWfIwtDgXomkOVggafhjAkzdSTPnW4WP3ZJX_fICMXGgbSRJwFaFdRrfA6okJzATFT1aCK2yXRy8fz4JOrf78Ico8UCImydqUbc2heggGEd1xafihS5h8U_zDShbB6xy2ClotGP8pNvcRUZnUqf3oVEtM1jGMCVQ6qodWaKCWj0SwVy0Ji-b1twywK0Igj1vCT3mlJh8qqceuZuzzy_kXA6FPXG144Eq9W9eYIJYW-XXLVtrSQ-uKep3bAx0PZaf30rptnwyHr7yfRcs9rjRZlDRD7M5tEn7LKGko3fDxz3tUSpG9aeDOYbf8mlQco2sAPqzeLzsnILD6Rksf68j5gygTkHqqCRvS_vQE80RHskqFSjwSqXhhNDwRAD9jlKPM3Oy8kBkFUbEiGQorO2BwoFGg31VRAUKXg8M9anbYKKzllIkx_2lzIMptD0qszATLiFv6L0aSY7wtpEvN_UlCjKaokz48B05kVhzSuZa6cZP-WRRVmdF9h3NVHBxu8jab-2FarD0ETBOzE';
+
+            if (!email) return alert('Please enter a valid email.');
+
+            try {
+                const response = await fetch('https://connect.mailerlite.com/api/subscribers', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json',
+                        'Authorization': `Bearer ${apiKey}`
+                    },
+                    body: JSON.stringify({
+                        email,
+                        fields: {
+                            name
+                        }
+                    })
+                });
+
+                if (response.ok) {
+                    alert('Success! Please check your inbox to confirm.');
+                    subscribeForm.reset();
+                    subscribeModal.classList.add('hidden');
+                } else {
+                    const data = await response.json();
+                    let errorMessage = 'Unable to subscribe.';
+                    if (data && data.errors) {
+                        errorMessage = Object.values(data.errors).flat().join(' ');
+                    } else if (data && data.message) {
+                        errorMessage = data.message;
+                    }
+                    alert(`Error: ${errorMessage}`);
+                }
+            } catch (err) {
+                alert('Network error. Please try again later.');
+            }
+        });
+    </script>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+</body>
+</html>
