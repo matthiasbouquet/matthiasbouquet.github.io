@@ -314,9 +314,9 @@
                             <span>Common mistakes to avoid</span>
                         </li>
                     </ul>
-                    <button id="open-subscribe-modal" type="button" class="w-full bg-secondary hover:bg-yellow-500 text-dark font-bold py-3 px-6 rounded-lg transition duration-300">
+                    <a href="#newsletter" class="text-center block w-full bg-secondary hover:bg-yellow-500 text-dark font-bold py-3 px-6 rounded-lg transition duration-300">
                         Get Instant Access
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -561,15 +561,7 @@
                 <div class="p-8 md:w-2/3">
                     <h2 class="text-2xl font-bold mb-2">Get Our Free Options Trading Guide</h2>
                     <p class="text-gray-600 mb-6">Join our newsletter and receive our exclusive 20-page guide: "3 Hedge Fund Options Strategies Anyone Can Use"</p>
-                    <form class="space-y-4">
-                        <div>
-                            <input type="email" placeholder="Your best email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary">
-                        </div>
-                        <button type="submit" class="w-full bg-secondary hover:bg-yellow-500 text-dark font-bold py-3 px-6 rounded-lg transition duration-300">
-                            Get Instant Access
-                        </button>
-                        <p class="text-sm text-gray-500">We respect your privacy. Unsubscribe at any time.</p>
-                    </form>
+                    <div class="ml-embedded" data-form="wUDmic"></div>
                 </div>
             </div>
         </div>
@@ -907,26 +899,6 @@
         </div>
     </footer>
 
-    <!-- Subscribe Modal (MailerLite) -->
-    <div id="subscribe-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-        <div class="bg-white rounded-xl w-full max-w-md p-8 relative">
-            <button id="close-subscribe-modal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
-                <i class="fas fa-times text-2xl"></i>
-            </button>
-            <h3 class="text-2xl font-bold mb-4 text-center">Subscribe to Our Newsletter</h3>
-            <form id="subscribe-form" class="space-y-4">
-                <input type="text" id="subscriber-name" name="name" placeholder="Your Name"
-                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary">
-                <input type="email" id="subscriber-email" name="email" placeholder="Your Email" required
-                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary">
-                <button type="submit" class="w-full bg-primary hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
-                    Subscribe
-                </button>
-                <p class="text-sm text-gray-500 text-center">We respect your privacy. Unsubscribe at any time.</p>
-            </form>
-        </div>
-    </div>
-
     <script>
         // Mobile menu toggle
         document.getElementById('mobile-menu-button').addEventListener('click', function() {
@@ -978,64 +950,16 @@
             e.preventDefault();
             document.getElementById('cheatsheet-pdf').classList.remove('hidden');
         });
-
-        // Subscribe modal logic & MailerLite API call
-        const subscribeModal = document.getElementById('subscribe-modal');
-        const openSubscribeBtn = document.getElementById('open-subscribe-modal');
-        const closeSubscribeBtn = document.getElementById('close-subscribe-modal');
-
-        openSubscribeBtn.addEventListener('click', () => subscribeModal.classList.remove('hidden'));
-        closeSubscribeBtn.addEventListener('click', () => subscribeModal.classList.add('hidden'));
-
-        subscribeModal.addEventListener('click', (e) => {
-            if (e.target === subscribeModal) subscribeModal.classList.add('hidden');
-        });
-
-        // Handle form submission
-        const subscribeForm = document.getElementById('subscribe-form');
-        subscribeForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const name = document.getElementById('subscriber-name').value.trim();
-            const email = document.getElementById('subscriber-email').value.trim();
-            const apiKey = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiNzBmMjQwOTZjNGYxMTgwMDRhYzgzNzUyMGE5ZWNiMzZmZDhiZDQ1OTE5ZWI4NTk2MTZkOWQ1MzJmODA1NzY1OGVkNDVmYTFkODYyZGY1YTAiLCJpYXQiOjE3NTE5MDY4NTcuMTEwMzczLCJuYmYiOjE3NTE5MDY4NTcuMTEwMzc2LCJleHAiOjQ5MDc1ODA0NTcuMTA1NjkzLCJzdWIiOiIxNjUxMDk0Iiwic2NvcGVzIjpbXX0.qIiuSoX-CqA8YK5-iZreUdCXuzgc4M1I6DCLtx0tGDvWXXBIvAZzQAhewzTUJf_KQHdFQerLMN8GBMeC0q9wHDIss4v7iNmvmHu8gtk4fm6DNWnY3gQwtO3m3qjGCOLS_GP6FBqiBFAFn5PfZZKgbCR4jrYCGFWfIwtDgXomkOVggafhjAkzdSTPnW4WP3ZJX_fICMXGgbSRJwFaFdRrfA6okJzATFT1aCK2yXRy8fz4JOrf78Ico8UCImydqUbc2heggGEd1xafihS5h8U_zDShbB6xy2ClotGP8pNvcRUZnUqf3oVEtM1jGMCVQ6qodWaKCWj0SwVy0Ji-b1twywK0Igj1vCT3mlJh8qqceuZuzzy_kXA6FPXG144Eq9W9eYIJYW-XXLVtrSQ-uKep3bAx0PZaf30rptnwyHr7yfRcs9rjRZlDRD7M5tEn7LKGko3fDxz3tUSpG9aeDOYbf8mlQco2sAPqzeLzsnILD6Rksf68j5gygTkHqqCRvS_vQE80RHskqFSjwSqXhhNDwRAD9jlKPM3Oy8kBkFUbEiGQorO2BwoFGg31VRAUKXg8M9anbYKKzllIkx_2lzIMptD0qszATLiFv6L0aSY7wtpEvN_UlCjKaokz48B05kVhzSuZa6cZP-WRRVmdF9h3NVHBxu8jab-2FarD0ETBOzE';
-
-            if (!email) return alert('Please enter a valid email.');
-
-            try {
-                const response = await fetch('https://connect.mailerlite.com/api/subscribers', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json',
-                        'Authorization': `Bearer ${apiKey}`
-                    },
-                    body: JSON.stringify({
-                        email,
-                        fields: {
-                            name
-                        }
-                    })
-                });
-
-                if (response.ok) {
-                    alert('Success! Please check your inbox to confirm.');
-                    subscribeForm.reset();
-                    subscribeModal.classList.add('hidden');
-                } else {
-                    const data = await response.json();
-                    let errorMessage = 'Unable to subscribe.';
-                    if (data && data.errors) {
-                        errorMessage = Object.values(data.errors).flat().join(' ');
-                    } else if (data && data.message) {
-                        errorMessage = data.message;
-                    }
-                    alert(`Error: ${errorMessage}`);
-                }
-            } catch (err) {
-                alert('Network error. Please try again later.');
-            }
-        });
     </script>
+    <!-- MailerLite Universal -->
+    <script>
+        (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+        .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+        n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+        (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+        ml('account', '1637934');
+    </script>
+    <!-- End MailerLite Universal -->
     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </body>
 </html>
