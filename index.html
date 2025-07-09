@@ -314,7 +314,7 @@
                             <span>Common mistakes to avoid</span>
                         </li>
                     </ul>
-                    <a href="#newsletter" class="text-center block w-full bg-secondary hover:bg-yellow-500 text-dark font-bold py-3 px-6 rounded-lg transition duration-300">
+                    <a href="documents/cheatsheet.pdf" download class="text-center block w-full bg-secondary hover:bg-yellow-500 text-dark font-bold py-3 px-6 rounded-lg transition duration-300">
                         Get Instant Access
                     </a>
                 </div>
@@ -629,180 +629,6 @@
         </div>
     </div>
 
-    <!-- Cheatsheet PDF Modal -->
-    <div id="cheatsheet-pdf" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-        <div class="bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
-            <div class="p-6">
-                <div class="flex justify-between items-center mb-6">
-                    <h3 class="text-2xl font-bold">Options Trading Cheatsheet</h3>
-                    <button onclick="document.getElementById('cheatsheet-pdf').classList.add('hidden')" class="text-gray-500 hover:text-gray-700">
-                        <i class="fas fa-times text-2xl"></i>
-                    </button>
-                </div>
-                
-                <!-- Cheatsheet Content -->
-                <div class="bg-gray-50 p-8 rounded-lg mb-6">
-                    <div class="text-center mb-8">
-                        <h1 class="text-3xl font-bold text-primary mb-2">Options Trading Cheatsheet</h1>
-                        <p class="text-secondary font-medium">Essential Concepts for Serious Traders</p>
-                    </div>
-                    
-                    <div class="grid md:grid-cols-2 gap-8 mb-8">
-                        <div class="bg-white p-6 rounded-lg shadow-sm">
-                            <h2 class="text-xl font-bold mb-4 text-primary border-b pb-2">Basic Strategies</h2>
-                            <div class="space-y-6">
-                                <div>
-                                    <h3 class="font-bold mb-2">Long Call</h3>
-                                    <div class="bg-gray-100 p-4 rounded-lg mb-2">
-                                        <img src="https://www.optionseducation.org/content/dam/oic/en/images/strategy/long-call.png" alt="Long Call P/L Diagram" class="w-full h-auto">
-                                    </div>
-                                    <p class="text-sm text-gray-600">Buy call option. Bullish strategy. Unlimited upside, limited risk.</p>
-                                </div>
-                                <div>
-                                    <h3 class="font-bold mb-2">Long Put</h3>
-                                    <div class="bg-gray-100 p-4 rounded-lg mb-2">
-                                        <img src="https://www.optionseducation.org/content/dam/oic/en/images/strategy/long-put.png" alt="Long Put P/L Diagram" class="w-full h-auto">
-                                    </div>
-                                    <p class="text-sm text-gray-600">Buy put option. Bearish strategy. Large upside if stock falls, limited risk.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="bg-white p-6 rounded-lg shadow-sm">
-                            <h2 class="text-xl font-bold mb-4 text-primary border-b pb-2">Advanced Strategies</h2>
-                            <div class="space-y-6">
-                                <div>
-                                    <h3 class="font-bold mb-2">Iron Condor</h3>
-                                    <div class="bg-gray-100 p-4 rounded-lg mb-2">
-                                        <img src="https://www.optionseducation.org/content/dam/oic/en/images/strategy/iron-condor.png" alt="Iron Condor P/L Diagram" class="w-full h-auto">
-                                    </div>
-                                    <p class="text-sm text-gray-600">Sell OTM call & put, buy further OTM call & put. Benefits from low volatility.</p>
-                                </div>
-                                <div>
-                                    <h3 class="font-bold mb-2">Butterfly Spread</h3>
-                                    <div class="bg-gray-100 p-4 rounded-lg mb-2">
-                                        <img src="https://www.optionseducation.org/content/dam/oic/en/images/strategy/long-call-butterfly.png" alt="Butterfly P/L Diagram" class="w-full h-auto">
-                                    </div>
-                                    <p class="text-sm text-gray-600">Combination of bull and bear spreads. Limited risk, limited profit potential.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-white p-6 rounded-lg shadow-sm mb-8">
-                        <h2 class="text-xl font-bold mb-4 text-primary border-b pb-2">The Greeks</h2>
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <div class="flex items-center mb-2">
-                                    <div class="bg-blue-100 text-blue-800 rounded-full w-8 h-8 flex items-center justify-center mr-3">
-                                        Δ
-                                    </div>
-                                    <h3 class="font-bold">Delta</h3>
-                                </div>
-                                <p class="text-sm text-gray-600 mb-2">Measures rate of change of option price relative to underlying asset price.</p>
-                                <p class="text-xs text-gray-500">Calls: 0 to +1 | Puts: -1 to 0</p>
-                            </div>
-                            <div>
-                                <div class="flex items-center mb-2">
-                                    <div class="bg-purple-100 text-purple-800 rounded-full w-8 h-8 flex items-center justify-center mr-3">
-                                        Γ
-                                    </div>
-                                    <h3 class="font-bold">Gamma</h3>
-                                </div>
-                                <p class="text-sm text-gray-600 mb-2">Measures rate of change of delta relative to underlying asset price.</p>
-                                <p class="text-xs text-gray-500">Highest for ATM options</p>
-                            </div>
-                            <div>
-                                <div class="flex items-center mb-2">
-                                    <div class="bg-yellow-100 text-yellow-800 rounded-full w-8 h-8 flex items-center justify-center mr-3">
-                                        Θ
-                                    </div>
-                                    <h3 class="font-bold">Theta</h3>
-                                </div>
-                                <p class="text-sm text-gray-600 mb-2">Measures rate of change of option price relative to time decay.</p>
-                                <p class="text-xs text-gray-500">Works for option sellers</p>
-                            </div>
-                            <div>
-                                <div class="flex items-center mb-2">
-                                    <div class="bg-green-100 text-green-800 rounded-full w-8 h-8 flex items-center justify-center mr-3">
-                                        ν
-                                    </div>
-                                    <h3 class="font-bold">Vega</h3>
-                                </div>
-                                <p class="text-sm text-gray-600 mb-2">Measures sensitivity to volatility. Higher vega = more volatility impact.</p>
-                                <p class="text-xs text-gray-500">Long options benefit from volatility</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-white p-6 rounded-lg shadow-sm">
-                        <h2 class="text-xl font-bold mb-4 text-primary border-b pb-2">Black-Scholes Formula</h2>
-                        <div class="flex flex-col md:flex-row gap-8 items-center">
-                            <div class="bg-gray-100 p-4 rounded-lg flex-1">
-                                <p class="font-mono text-sm mb-2">C = S<sub>0</sub>N(d<sub>1</sub>) - Ke<sup>-rT</sup>N(d<sub>2</sub>)</p>
-                                <p class="font-mono text-sm">P = Ke<sup>-rT</sup>N(-d<sub>2</sub>) - S<sub>0</sub>N(-d<sub>1</sub>)</p>
-                                <div class="mt-4 text-xs text-gray-600">
-                                    <p>Where:</p>
-                                    <p>d<sub>1</sub> = [ln(S<sub>0</sub>/K) + (r + σ²/2)T] / (σ√T)</p>
-                                    <p>d<sub>2</sub> = d<sub>1</sub> - σ√T</p>
-                                </div>
-                            </div>
-                            <div class="flex-1">
-                                <table class="min-w-full text-sm">
-                                    <thead>
-                                        <tr class="bg-gray-100">
-                                            <th class="py-2 px-4 text-left">Variable</th>
-                                            <th class="py-2 px-4 text-left">Meaning</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr class="border-b">
-                                            <td class="py-2 px-4">C</td>
-                                            <td class="py-2 px-4">Call option price</td>
-                                        </tr>
-                                        <tr class="border-b">
-                                            <td class="py-2 px-4">P</td>
-                                            <td class="py-2 px-4">Put option price</td>
-                                        </tr>
-                                        <tr class="border-b">
-                                            <td class="py-2 px-4">S<sub>0</sub></td>
-                                            <td class="py-2 px-4">Current stock price</td>
-                                        </tr>
-                                        <tr class="border-b">
-                                            <td class="py-2 px-4">K</td>
-                                            <td class="py-2 px-4">Strike price</td>
-                                        </tr>
-                                        <tr class="border-b">
-                                            <td class="py-2 px-4">r</td>
-                                            <td class="py-2 px-4">Risk-free interest rate</td>
-                                        </tr>
-                                        <tr class="border-b">
-                                            <td class="py-2 px-4">T</td>
-                                            <td class="py-2 px-4">Time to expiration</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="py-2 px-4">σ</td>
-                                            <td class="py-2 px-4">Volatility of returns</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="mt-8 text-center">
-                        <button onclick="window.print()" class="bg-primary hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg inline-flex items-center mr-4">
-                            <i class="fas fa-print mr-2"></i> Print
-                        </button>
-                        <button class="bg-secondary hover:bg-yellow-500 text-dark font-bold py-2 px-6 rounded-lg inline-flex items-center">
-                            <i class="fas fa-download mr-2"></i> Download PDF
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Contact/CTA -->
     <div id="contact" class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -943,12 +769,6 @@
                     }
                 }
             });
-        });
-
-        // Open cheatsheet modal
-        document.querySelector('a[href="#cheatsheet-pdf"]').addEventListener('click', function(e) {
-            e.preventDefault();
-            document.getElementById('cheatsheet-pdf').classList.remove('hidden');
         });
     </script>
     <!-- MailerLite Universal -->
