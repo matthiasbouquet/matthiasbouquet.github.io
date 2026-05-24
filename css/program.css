@@ -1,0 +1,338 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+:root {
+    --primary: #1e3a8a;
+    --secondary: #f59e0b;
+    --dark: #111827;
+    --slate-50: #f8fafc;
+    --slate-200: #e2e8f0;
+    --slate-300: #cbd5e1;
+    --gray-500: #6b7280;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --blue-100: #dbeafe;
+    --max-w: 48rem;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--gray-700);
+    background: var(--slate-50);
+    -webkit-font-smoothing: antialiased;
+}
+
+body.fonts-loaded {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.page-gradient {
+    background: linear-gradient(160deg, #0f172a 0%, var(--primary) 45%, #0f172a 100%);
+    color: #fff;
+}
+
+.wrap {
+    max-width: var(--max-w);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+    .wrap { padding-left: 1.5rem; padding-right: 1.5rem; }
+}
+
+.site-header { padding-top: 1.5rem; padding-bottom: 2.5rem; }
+@media (min-width: 640px) { .site-header { padding-bottom: 3rem; } }
+
+.logo-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 0.9;
+    text-decoration: none;
+    color: inherit;
+}
+.logo-link:hover { opacity: 1; }
+
+.logo-link img {
+    height: 2.25rem;
+    width: auto;
+}
+
+.logo-text {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: none;
+}
+@media (min-width: 640px) { .logo-text { display: inline; } }
+
+.eyebrow {
+    margin-top: 2rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--secondary);
+}
+
+h1 {
+    margin: 0.75rem 0 0;
+    font-size: 1.875rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+@media (min-width: 640px) { h1 { font-size: 2.25rem; } }
+
+h1 .accent { color: var(--secondary); }
+
+.lead {
+    margin-top: 1rem;
+    font-size: 1.125rem;
+    color: var(--slate-300);
+    max-width: 36rem;
+}
+
+main {
+    position: relative;
+    z-index: 10;
+    margin-top: -1rem;
+    padding-bottom: 5rem;
+}
+@media (min-width: 768px) { main { padding-bottom: 0; } }
+
+.video-frame {
+    border-radius: 1rem;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+    outline: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.video-ratio {
+    position: relative;
+    padding: 56.25% 0 0 0;
+}
+
+.video-ratio iframe,
+.video-ratio .vimeo-facade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.vimeo-facade {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: #0f172a center / cover no-repeat;
+    border: none;
+    padding: 0;
+}
+
+.vimeo-facade::after {
+    content: '';
+    width: 4.5rem;
+    height: 4.5rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 50%;
+    clip-path: polygon(38% 28%, 38% 72%, 72% 50%);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+}
+
+.cta-section {
+    margin-top: 2.5rem;
+    text-align: center;
+}
+
+.cta-section h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--dark);
+}
+@media (min-width: 640px) { .cta-section h2 { font-size: 1.5rem; } }
+
+.cta-section p {
+    margin: 0.75rem auto 0;
+    max-width: 32rem;
+    color: var(--gray-600);
+}
+
+.btn-primary {
+    display: inline-block;
+    margin-top: 1.5rem;
+    width: 100%;
+    padding: 1rem 2.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    color: var(--dark);
+    background: var(--secondary);
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 25px -5px rgba(245, 158, 11, 0.35);
+    transition: background 0.2s;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+@media (min-width: 640px) { .btn-primary { width: auto; } }
+.btn-primary:hover { background: #fbbf24; }
+
+.card {
+    margin-top: 3rem;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 1rem;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+@media (min-width: 640px) { .card { padding: 2rem; } }
+
+.card h3 {
+    margin: 0 0 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--primary);
+}
+
+.steps { list-style: none; margin: 0; padding: 0; }
+.steps li {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+.steps li:first-child { margin-top: 0; }
+
+.step-num {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--primary);
+    background: rgba(30, 58, 138, 0.1);
+    border-radius: 50%;
+}
+
+#book {
+    margin-top: 3rem;
+    scroll-margin-top: 1.5rem;
+}
+
+.book-card {
+    background: #fff;
+    border-radius: 1rem;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.book-card-header {
+    padding: 1.25rem 1.5rem;
+    text-align: center;
+    background: var(--primary);
+    color: #fff;
+}
+
+.book-card-header h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.book-card-header p {
+    margin: 0.25rem 0 0;
+    font-size: 0.875rem;
+    color: var(--blue-100);
+}
+
+.book-card-body { padding: 1rem 1.5rem; }
+@media (min-width: 640px) { .book-card-body { padding: 1.5rem; } }
+
+.calendly-skeleton {
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    color: var(--gray-500);
+    font-size: 0.875rem;
+}
+
+.calendly-skeleton .spinner {
+    width: 2rem;
+    height: 2rem;
+    border: 3px solid var(--slate-200);
+    border-top-color: var(--primary);
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.credibility {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--gray-500);
+    line-height: 1.6;
+}
+
+.site-footer {
+    margin-top: 4rem;
+    padding: 2rem 0;
+    border-top: 1px solid var(--slate-200);
+    background: #fff;
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--gray-500);
+}
+
+.site-footer p { margin: 0.5rem 0 0; }
+.site-footer a {
+    color: inherit;
+    text-decoration: none;
+}
+.site-footer a:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+.sticky-cta {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    border-top: 1px solid var(--slate-200);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+}
+@media (min-width: 768px) { .sticky-cta { display: none; } }
+
+.sticky-cta .btn-primary {
+    margin-top: 0;
+    width: 100%;
+}
