@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Disclaimer | Hedge Fund Secrets</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link rel="icon" href="../images/hfs_logo.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,8 +50,8 @@
                     </div>
                 </div>
                 <div class="md:hidden flex items-center">
-                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-primary focus:outline-none" id="mobile-menu-button">
-                        <i class="fas fa-bars text-xl"></i>
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-primary focus:outline-none" id="mobile-menu-button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+                        <i class="fas fa-bars text-xl" aria-hidden="true"></i>
                     </button>
                 </div>
             </div>
@@ -58,6 +59,7 @@
         <!-- Mobile menu -->
         <div class="md:hidden hidden bg-white border-t" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="../index.html#program" class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Program</a>
                 <a href="../index.html#features" class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Features</a>
                 <a href="../index.html#guide" class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Free Guide</a>
                 <a href="../index.html#testimonials" class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Testimonials</a>
@@ -138,10 +140,11 @@
                 </div>
             </div>
             <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-                <p>© 2025 Hedge Fund Secrets. All rights reserved.</p>
+                <p>© 2026 Hedge Fund Secrets. All rights reserved.</p>
                 <p class="mt-2 text-sm">This is not investment advice. Trading involves risk of loss.</p>
             </div>
         </div>
     </footer>
+    <script src="../js/site.js"></script>
 </body>
 </html> 
