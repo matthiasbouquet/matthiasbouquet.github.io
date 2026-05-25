@@ -1,5 +1,5 @@
 (function () {
-    var CALENDLY_URL = 'https://calendly.com/matthias-authenticself/no-cost-portfolio-call';
+    var CALENDLY_URL = 'https://calendly.com/matthias-authenticself/no-cost-portfolio-call?hide_event_type_details=1&hide_gdpr_banner=1';
     var VIMEO_ID = '1195020310';
     var calendlyLoaded = false;
 
