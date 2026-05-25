@@ -21,13 +21,8 @@
 
     function initVimeoFacade() {
         var container = document.getElementById('vimeo-container');
-        if (!container) return;
-
-        var facade = document.createElement('button');
-        facade.type = 'button';
-        facade.className = 'vimeo-facade';
-        facade.setAttribute('aria-label', 'Play video: How experts actually view trading');
-        facade.style.background = 'linear-gradient(145deg, #0f172a 0%, #1e3a8a 60%, #0f172a 100%)';
+        var facade = document.getElementById('vimeo-facade');
+        if (!container || !facade) return;
 
         function mountPlayer() {
             if (container.querySelector('iframe')) return;
@@ -42,7 +37,6 @@
         }
 
         facade.addEventListener('click', mountPlayer);
-        container.appendChild(facade);
     }
 
     function loadCalendly() {
