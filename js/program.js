@@ -45,6 +45,24 @@
 
         var skeleton = document.getElementById('calendly-skeleton');
         var widget = document.getElementById('calendly-widget');
+        if (!widget) return;
+
+        widget.className = 'calendly-inline-widget';
+        widget.setAttribute('data-url', CALENDLY_URL);
+
+        if (skeleton && 'MutationObserver' in window) {
+            var obs = new MutationObserver(function () {
+                if (widget.querySelector('iframe')) {
+                    skeleton.remove();
+                    obs.disconnect();
+                }
+            });
+            obs.observe(widget, { childList: true, subtree: true });
+            setTimeout(function () {
+                if (document.body.contains(skeleton)) skeleton.remove();
+                obs.disconnect();
+            }, 10000);
+        }
 
         var css = document.createElement('link');
         css.rel = 'stylesheet';
@@ -54,18 +72,6 @@
         var script = document.createElement('script');
         script.src = 'https://assets.calendly.com/assets/external/widget.js';
         script.async = true;
-        script.onload = function () {
-            if (skeleton) skeleton.remove();
-            if (widget) {
-                widget.className = 'calendly-inline-widget';
-                widget.setAttribute('data-url', CALENDLY_URL);
-                widget.style.minWidth = '280px';
-                widget.style.height = '700px';
-            }
-            if (window.Calendly && window.Calendly.initInlineWidgets) {
-                window.Calendly.initInlineWidgets();
-            }
-        };
         document.body.appendChild(script);
     }
 
