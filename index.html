@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hedge Fund Secrets | Book a Free Portfolio Call</title>
-    <meta name="description" content="Watch a short briefing from Matthias Bouquet, PhD, former JP Morgan Executive Director, then book a free 30-minute portfolio call to map your next step in options trading.">
+    <title>Desk-Grade Options Trading Process | Hedge Fund Secrets</title>
+    <meta name="description" content="Watch a short briefing from Matthias Bouquet, PhD, former JP Morgan Executive Director, then book a free portfolio call to install a risk-first options trading process.">
     <link rel="canonical" href="https://hedge-fund-secrets.com/">
     <link rel="icon" href="images/hfs_logo.png" type="image/png">
-    <meta property="og:title" content="Hedge Fund Secrets | Book a Free Portfolio Call">
-    <meta property="og:description" content="Institutional-grade options trading coaching from a former JP Morgan derivatives strategist. Watch the briefing, then book a free portfolio call.">
+    <meta property="og:title" content="Desk-Grade Options Trading Process | Hedge Fund Secrets">
+    <meta property="og:description" content="Institutional-grade options coaching from a former JP Morgan derivatives strategist. Watch the briefing, then book a free portfolio call.">
     <meta property="og:url" content="https://hedge-fund-secrets.com/">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="https://hedge-fund-secrets.com/images/video_thumbnail.jpg">
     <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet"></noscript>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
     <link rel="preload" href="images/video_thumbnail.jpg" as="image" fetchpriority="high">
     <link rel="preconnect" href="https://player.vimeo.com">
     <link rel="preconnect" href="https://assets.calendly.com">
@@ -28,9 +29,10 @@
                 extend: {
                     colors: {
                         primary: '#1e3a8a',
-                        secondary: '#f59e0b',
-                        dark: '#111827',
-                        light: '#f3f4f6',
+                        secondary: '#f4b942',
+                        dark: '#070b16',
+                        navy: '#0b1530',
+                        light: '#f8fafc',
                     },
                     fontFamily: {
                         sans: ['Montserrat', 'sans-serif'],
@@ -58,15 +60,65 @@
     <!-- End Meta Pixel Code -->
     <style>
         html { scroll-behavior: smooth; }
-        .hero-gradient { background: linear-gradient(160deg, #0f172a 0%, #1e3a8a 48%, #0f172a 100%); }
-        .hover-grow { transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease; }
-        .hover-grow:hover { transform: translateY(-2px); }
+        body {
+            background:
+                radial-gradient(circle at top left, rgba(244, 185, 66, 0.12), transparent 34rem),
+                radial-gradient(circle at top right, rgba(30, 58, 138, 0.42), transparent 38rem),
+                #070b16;
+        }
+        section[id] { scroll-margin-top: 6.5rem; }
+        ::selection { background: rgba(244, 185, 66, 0.35); color: #fff; }
+        .hero-shell {
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-shell::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+            background-size: 72px 72px;
+            mask-image: linear-gradient(to bottom, rgba(0,0,0,0.75), transparent 78%);
+            pointer-events: none;
+        }
+        .glass-card {
+            background: linear-gradient(180deg, rgba(255,255,255,0.075), rgba(255,255,255,0.035));
+            border: 1px solid rgba(255, 255, 255, 0.11);
+            box-shadow: 0 24px 70px -34px rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(14px);
+        }
+        .kicker {
+            color: #f4b942;
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+        }
+        .cta-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.65rem;
+            border-radius: 0.9rem;
+            background: linear-gradient(180deg, #ffd778, #f4b942);
+            color: #111827;
+            font-weight: 800;
+            box-shadow: 0 18px 45px -18px rgba(244, 185, 66, 0.65), inset 0 1px 0 rgba(255,255,255,0.55);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+        }
+        .cta-primary:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.03);
+            box-shadow: 0 24px 60px -20px rgba(244, 185, 66, 0.75), inset 0 1px 0 rgba(255,255,255,0.6);
+        }
         .video-frame {
-            border-radius: 1rem;
+            border-radius: 1.25rem;
             overflow: hidden;
             background: #000;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
-            outline: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 34px 90px -36px rgba(0, 0, 0, 0.95);
+            outline: 1px solid rgba(255, 255, 255, 0.14);
         }
         .video-ratio { position: relative; padding: 56.25% 0 0 0; }
         .video-ratio iframe,
@@ -96,7 +148,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(180deg, rgba(15, 23, 42, 0) 35%, rgba(15, 23, 42, 0.72) 100%);
+            background: linear-gradient(180deg, rgba(7, 11, 22, 0) 30%, rgba(7, 11, 22, 0.82) 100%);
             z-index: 1;
         }
         .vimeo-play {
@@ -105,10 +157,10 @@
             left: 50%;
             transform: translate(-50%, -50%);
             z-index: 2;
-            filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.5));
+            filter: drop-shadow(0 10px 28px rgba(0, 0, 0, 0.6));
             transition: transform 0.2s ease;
         }
-        .vimeo-play svg { display: block; width: clamp(64px, 12vw, 96px); height: auto; }
+        .vimeo-play svg { display: block; width: clamp(68px, 11vw, 104px); height: auto; }
         .vimeo-caption {
             position: absolute;
             bottom: 1rem;
@@ -117,30 +169,48 @@
             z-index: 2;
             color: #fff;
             font-size: 0.875rem;
-            font-weight: 700;
+            font-weight: 800;
             text-align: center;
             letter-spacing: 0.02em;
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.65);
         }
         .vimeo-facade:hover img,
-        .vimeo-facade:focus-visible img { transform: scale(1.03); filter: brightness(1.05); }
+        .vimeo-facade:focus-visible img { transform: scale(1.035); filter: brightness(1.06); }
         .vimeo-facade:hover .vimeo-play,
         .vimeo-facade:focus-visible .vimeo-play { transform: translate(-50%, -50%) scale(1.08); }
-        .vimeo-facade:focus-visible { outline: 3px solid #f59e0b; outline-offset: -3px; }
-        .feature-icon {
-            width: 56px;
-            height: 56px;
-            display: flex;
+        .vimeo-facade:focus-visible { outline: 3px solid #f4b942; outline-offset: -3px; }
+        .icon-chip {
+            width: 3rem;
+            height: 3rem;
+            display: inline-flex;
             align-items: center;
             justify-content: center;
-            border-radius: 9999px;
-            margin-bottom: 1rem;
+            border-radius: 1rem;
+            color: #f4b942;
+            background: rgba(244, 185, 66, 0.1);
+            border: 1px solid rgba(244, 185, 66, 0.22);
         }
-        .faq-item { border-bottom: 1px solid #e5e7eb; padding-bottom: 1rem; margin-bottom: 1rem; }
-        .faq-question { cursor: pointer; transition: color 0.2s ease; background: none; border: none; }
-        .faq-question:hover { color: #f59e0b; }
+        .faq-item { border: 1px solid rgba(255,255,255,0.1); border-radius: 1rem; background: rgba(255,255,255,0.035); }
+        .faq-question { cursor: pointer; background: none; border: none; }
         .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
         .faq-answer.active { overflow: visible; }
+        .fit-option {
+            width: 100%;
+            border: 1px solid rgba(255,255,255,0.12);
+            background: rgba(255,255,255,0.04);
+            color: #cbd5e1;
+            border-radius: 0.85rem;
+            padding: 0.8rem 0.95rem;
+            text-align: left;
+            font-weight: 700;
+            transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+        }
+        .fit-option:hover { transform: translateY(-1px); border-color: rgba(244,185,66,0.55); }
+        .fit-option.is-selected {
+            background: rgba(244, 185, 66, 0.16);
+            border-color: #f4b942;
+            color: #fff;
+        }
         .calendly-wrap { position: relative; min-height: 700px; }
         #calendly-widget { min-width: 280px; width: 100%; height: 700px; }
         .calendly-skeleton {
@@ -151,7 +221,7 @@
             align-items: center;
             justify-content: center;
             gap: 1rem;
-            color: #6b7280;
+            color: #64748b;
             font-size: 0.875rem;
             background: #fff;
             pointer-events: none;
@@ -173,10 +243,10 @@
             right: 0;
             z-index: 50;
             padding: 0.75rem;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(8px);
-            border-top: 1px solid #e2e8f0;
-            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+            background: rgba(7, 11, 22, 0.92);
+            backdrop-filter: blur(12px);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 -14px 40px rgba(0, 0, 0, 0.45);
             transition: transform 0.25s ease;
         }
         .sticky-cta.is-hidden { transform: translateY(110%); }
@@ -184,361 +254,376 @@
         @media (min-width: 768px) { .sticky-cta { display: none; } }
     </style>
 </head>
-<body class="font-sans antialiased text-slate-800 bg-slate-50">
-    <nav class="bg-white/95 backdrop-blur shadow-lg sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20 items-center">
-                <a href="#top" class="flex-shrink-0 flex items-center" aria-label="Hedge Fund Secrets home">
-                    <img src="images/hfs_logo.png" alt="Hedge Fund Secrets Logo" class="h-12 mr-3" width="189" height="48">
-                    <span class="text-primary font-semibold text-lg uppercase tracking-wider hidden sm:inline">Hedge Fund Secrets</span>
-                </a>
-                <div class="hidden md:flex items-center space-x-2">
-                    <a href="#program" class="text-slate-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Program</a>
-                    <a href="#about" class="text-slate-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">About</a>
-                    <a href="#testimonials" class="text-slate-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Proof</a>
-                    <a href="#faq" class="text-slate-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">FAQ</a>
-                    <a href="#book" data-book-call class="bg-secondary text-dark px-5 py-2.5 rounded-md text-sm font-bold hover:bg-yellow-500 transition duration-300">Book a Free Call</a>
-                </div>
-                <div class="md:hidden flex items-center">
-                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-slate-700 hover:text-primary focus:outline-none" id="mobile-menu-button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
-                        <i class="fas fa-bars text-xl" aria-hidden="true"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="md:hidden hidden bg-white border-t" id="mobile-menu">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#program" class="text-slate-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Program</a>
-                <a href="#about" class="text-slate-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">About</a>
-                <a href="#testimonials" class="text-slate-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Proof</a>
-                <a href="#faq" class="text-slate-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">FAQ</a>
-                <a href="#book" data-book-call class="bg-secondary text-dark block px-3 py-2 rounded-md text-base font-bold hover:bg-yellow-500 transition duration-300">Book a Free Call</a>
-            </div>
-        </div>
-    </nav>
-
-    <header id="top" class="hero-gradient text-white">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-16 md:pt-20 md:pb-24 text-center">
-            <p class="text-secondary font-bold uppercase tracking-[0.2em] text-sm">PhD · Former JP Morgan Executive Director</p>
-            <h1 class="text-4xl md:text-6xl font-extrabold mt-5 mb-6 leading-tight">How a JP Morgan derivatives strategist would rebuild your <span class="text-secondary">options trading</span></h1>
-            <p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto mb-10">Watch the short briefing below. If the approach fits, book a free 30-minute portfolio call and leave with a clear next step — whether we work together or not.</p>
-
-            <section class="video-frame text-left" aria-label="Video briefing">
-                <div class="video-ratio" id="vimeo-container">
-                    <button type="button" id="vimeo-facade" class="vimeo-facade" aria-label="Play video: How experts actually view trading">
-                        <img src="images/video_thumbnail.jpg" alt="Video briefing thumbnail" width="1280" height="720" decoding="async" fetchpriority="high">
-                        <span class="vimeo-play" aria-hidden="true">
-                            <svg viewBox="0 0 68 48" width="68" height="48" focusable="false">
-                                <path d="M66.5 7.7c-.8-2.9-3-5.2-5.9-5.9C55.4.5 34 .5 34 .5S12.6.5 7.4 1.8C4.5 2.5 2.3 4.8 1.5 7.7.2 12.9.2 24 .2 24s0 11.1 1.3 16.3c.8 2.9 3 5.2 5.9 5.9C12.6 47.5 34 47.5 34 47.5s21.4 0 26.6-1.3c2.9-.7 5.1-3 5.9-5.9C67.8 35.1 67.8 24 67.8 24s0-11.1-1.3-16.3z" fill="#F59E0B"/>
-                                <path d="M27 34l18-10L27 14v20z" fill="#0F172A"/>
-                            </svg>
-                        </span>
-                        <span class="vimeo-caption">Watch the briefing, then book your free portfolio call</span>
-                    </button>
-                </div>
-            </section>
-
-            <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="#book" data-book-call class="bg-secondary hover:bg-yellow-500 text-dark font-extrabold py-4 px-8 rounded-xl text-lg transition duration-300 hover-grow shadow-lg shadow-secondary/30">Book Your Free Portfolio Call</a>
-                <p class="text-sm text-slate-300">Free 30-minute video call · No obligation · Educational only, not investment advice</p>
-            </div>
+<body class="font-sans antialiased bg-dark text-slate-200">
+    <header class="sticky top-0 z-50 border-b border-white/10 bg-dark/85 backdrop-blur-xl">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#top" class="flex items-center gap-3" aria-label="Hedge Fund Secrets home">
+                <img src="images/hfs_logo_inv_rmv.png" alt="Hedge Fund Secrets" class="h-10 w-auto" width="160" height="48">
+                <span class="hidden sm:inline text-white font-extrabold uppercase tracking-[0.18em] text-sm">Hedge Fund Secrets</span>
+            </a>
+            <a href="#book" data-book-call class="cta-primary px-5 py-2.5 text-sm">Book a Free Call</a>
         </div>
     </header>
 
-    <main>
-        <section class="bg-white py-10 border-b border-slate-200" aria-label="Credentials">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                    <div class="flex flex-col items-center text-center">
-                        <i class="fas fa-building-columns text-3xl text-primary mb-2" aria-hidden="true"></i>
-                        <p class="text-sm font-bold">8 years at JP Morgan</p>
-                        <p class="text-xs text-slate-500">Executive Director, derivatives strategy</p>
+    <main id="top">
+        <section class="hero-shell">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-16 md:pt-20 md:pb-24 relative">
+                <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+                    <div class="lg:col-span-6">
+                        <div class="inline-flex items-center gap-2 rounded-full border border-secondary/30 bg-secondary/10 px-4 py-2">
+                            <span class="w-2 h-2 rounded-full bg-secondary"></span>
+                            <span class="text-secondary text-xs font-extrabold uppercase tracking-[0.18em]">Former JP Morgan Executive Director · PhD</span>
+                        </div>
+                        <h1 class="text-white text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.02] mt-6">
+                            Trade options with a <span class="text-secondary">desk-grade risk process</span>.
+                        </h1>
+                        <p class="text-lg md:text-xl text-slate-300 mt-6 max-w-xl">
+                            Watch the short briefing, then book a free 30-minute portfolio call. You’ll leave knowing the exact constraint on your consistency — and whether my 8-week coaching program is the right fix.
+                        </p>
+                        <div class="mt-8 flex flex-col sm:flex-row sm:items-center gap-4">
+                            <a href="#book" data-book-call class="cta-primary px-7 py-4 text-base">Book Your Free Portfolio Call <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                            <p class="text-sm text-slate-400">No email required to watch · No obligation · Educational only</p>
+                        </div>
+                        <div class="mt-10 grid grid-cols-3 gap-3 max-w-xl">
+                            <div class="glass-card rounded-2xl p-4">
+                                <p class="text-white text-2xl font-extrabold">8 yrs</p>
+                                <p class="text-xs text-slate-400 mt-1">JP Morgan derivatives strategy</p>
+                            </div>
+                            <div class="glass-card rounded-2xl p-4">
+                                <p class="text-white text-2xl font-extrabold">15+</p>
+                                <p class="text-xs text-slate-400 mt-1">years in quant finance</p>
+                            </div>
+                            <div class="glass-card rounded-2xl p-4">
+                                <p class="text-white text-2xl font-extrabold">1:1</p>
+                                <p class="text-xs text-slate-400 mt-1">coaching, debriefs, roadmap</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="flex flex-col items-center text-center">
-                        <i class="fas fa-graduation-cap text-3xl text-secondary mb-2" aria-hidden="true"></i>
-                        <p class="text-sm font-bold">PhD in Applied Mathematics</p>
-                        <p class="text-xs text-slate-500">University of Tokyo · Ecole Centrale Paris</p>
-                    </div>
-                    <div class="flex flex-col items-center text-center">
-                        <i class="fas fa-chart-line text-3xl text-primary mb-2" aria-hidden="true"></i>
-                        <p class="text-sm font-bold">15+ years in quant finance</p>
-                        <p class="text-xs text-slate-500">Tokyo · London · Singapore</p>
-                    </div>
-                    <div class="flex flex-col items-center text-center">
-                        <i class="fas fa-user-check text-3xl text-secondary mb-2" aria-hidden="true"></i>
-                        <p class="text-sm font-bold">Dozens of traders coached</p>
-                        <p class="text-xs text-slate-500">Risk-managed, process-first approach</p>
+                    <div class="lg:col-span-6">
+                        <div class="glass-card rounded-[1.4rem] p-3 sm:p-4">
+                            <div class="flex items-center justify-between px-2 pb-3">
+                                <p class="text-xs font-extrabold uppercase tracking-[0.2em] text-slate-400">Private briefing</p>
+                                <p class="text-xs font-bold text-secondary">Watch before you book</p>
+                            </div>
+                            <section class="video-frame" aria-label="Video briefing">
+                                <div class="video-ratio" id="vimeo-container">
+                                    <button type="button" id="vimeo-facade" class="vimeo-facade" aria-label="Play video: How experts actually view trading">
+                                        <img src="images/video_thumbnail.jpg" alt="Video briefing thumbnail" width="1280" height="720" decoding="async" fetchpriority="high">
+                                        <span class="vimeo-play" aria-hidden="true">
+                                            <svg viewBox="0 0 68 48" width="68" height="48" focusable="false">
+                                                <path d="M66.5 7.7c-.8-2.9-3-5.2-5.9-5.9C55.4.5 34 .5 34 .5S12.6.5 7.4 1.8C4.5 2.5 2.3 4.8 1.5 7.7.2 12.9.2 24 .2 24s0 11.1 1.3 16.3c.8 2.9 3 5.2 5.9 5.9C12.6 47.5 34 47.5 34 47.5s21.4 0 26.6-1.3c2.9-.7 5.1-3 5.9-5.9C67.8 35.1 67.8 24 67.8 24s0-11.1-1.3-16.3z" fill="#F4B942"/>
+                                                <path d="M27 34l18-10L27 14v20z" fill="#070B16"/>
+                                            </svg>
+                                        </span>
+                                        <span class="vimeo-caption">How institutional traders think about risk, structure, and consistency</span>
+                                    </button>
+                                </div>
+                            </section>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="features" class="py-16 bg-slate-50">
+        <section class="border-y border-white/10 bg-navy/60" aria-label="Authority">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="flex items-center gap-3">
+                        <span class="icon-chip"><i class="fas fa-building-columns" aria-hidden="true"></i></span>
+                        <div><p class="text-white font-bold">Executive Director</p><p class="text-xs text-slate-400">Derivatives strategy, JP Morgan</p></div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="icon-chip"><i class="fas fa-graduation-cap" aria-hidden="true"></i></span>
+                        <div><p class="text-white font-bold">PhD, Applied Math</p><p class="text-xs text-slate-400">University of Tokyo</p></div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="icon-chip"><i class="fas fa-globe" aria-hidden="true"></i></span>
+                        <div><p class="text-white font-bold">Tokyo · London · Singapore</p><p class="text-xs text-slate-400">Banks, hedge funds, research</p></div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="icon-chip"><i class="fas fa-shield-halved" aria-hidden="true"></i></span>
+                        <div><p class="text-white font-bold">Risk-first process</p><p class="text-xs text-slate-400">Structure, sizing, review</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="py-20">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="max-w-3xl">
-                    <p class="text-primary font-bold uppercase tracking-wider text-sm">The problem</p>
-                    <h2 class="text-3xl md:text-4xl font-extrabold mt-3 mb-4">If your results are inconsistent, it’s probably not effort you’re missing.</h2>
-                    <p class="text-lg text-slate-600">Most retail traders are taught entries first and risk later. Institutional desks do the opposite: define risk, size the position, then decide if the trade is worth taking.</p>
+                    <p class="kicker">The real issue</p>
+                    <h2 class="text-white text-3xl md:text-5xl font-extrabold mt-4">Most traders don’t need more setups. They need a professional decision process.</h2>
+                    <p class="text-lg text-slate-400 mt-5">Retail education usually starts with entries. Desks start with risk: what can be lost, how size is set, what invalidates the trade, and how the trade is reviewed.</p>
                 </div>
-                <div class="grid md:grid-cols-3 gap-6 mt-10">
-                    <div class="bg-white p-7 rounded-2xl shadow-md hover-grow">
-                        <div class="feature-icon bg-primary/10 text-primary"><i class="fas fa-layer-group text-2xl" aria-hidden="true"></i></div>
-                        <h3 class="text-xl font-bold mb-2">No repeatable framework</h3>
-                        <p class="text-slate-600">Random setups create random P&L. You need a process for market selection, structure, entry, exit, and review.</p>
+                <div class="grid md:grid-cols-3 gap-5 mt-12">
+                    <div class="glass-card rounded-3xl p-7">
+                        <span class="icon-chip"><i class="fas fa-diagram-project" aria-hidden="true"></i></span>
+                        <h3 class="text-white text-xl font-extrabold mt-5">Structure before conviction</h3>
+                        <p class="text-slate-400 mt-3">Choose the payoff shape first: defined risk, expiry, capital use, and what the market must do for the trade to work.</p>
                     </div>
-                    <div class="bg-white p-7 rounded-2xl shadow-md hover-grow">
-                        <div class="feature-icon bg-secondary/10 text-secondary"><i class="fas fa-shield-halved text-2xl" aria-hidden="true"></i></div>
-                        <h3 class="text-xl font-bold mb-2">Risk is an afterthought</h3>
-                        <p class="text-slate-600">Defined-risk structures, capital allocation, and trade sizing are what keep you in the game long enough to compound.</p>
+                    <div class="glass-card rounded-3xl p-7">
+                        <span class="icon-chip"><i class="fas fa-scale-balanced" aria-hidden="true"></i></span>
+                        <h3 class="text-white text-xl font-extrabold mt-5">Sizing before entries</h3>
+                        <p class="text-slate-400 mt-3">Position size comes from max loss and portfolio impact — not from how good the setup feels in the moment.</p>
                     </div>
-                    <div class="bg-white p-7 rounded-2xl shadow-md hover-grow">
-                        <div class="feature-icon bg-primary/10 text-primary"><i class="fas fa-filter text-2xl" aria-hidden="true"></i></div>
-                        <h3 class="text-xl font-bold mb-2">Too much noise</h3>
-                        <p class="text-slate-600">Greeks, IV, skew, events, macro — you only need the few inputs that actually change the trade decision.</p>
+                    <div class="glass-card rounded-3xl p-7">
+                        <span class="icon-chip"><i class="fas fa-clipboard-check" aria-hidden="true"></i></span>
+                        <h3 class="text-white text-xl font-extrabold mt-5">Review before repetition</h3>
+                        <p class="text-slate-400 mt-3">A tight debrief loop turns random trades into data, so your process improves instead of your emotions taking over.</p>
                     </div>
                 </div>
-                <div class="mt-10">
-                    <a href="#book" data-book-call class="inline-block bg-primary hover:bg-blue-800 text-white font-bold py-3 px-7 rounded-xl transition duration-300">Get a desk-grade review of your trading</a>
-                </div>
+                <a href="#book" data-book-call class="cta-primary px-7 py-4 mt-10">Get a desk-grade review of your trading</a>
             </div>
         </section>
 
-        <section class="py-16 bg-white" aria-label="What happens on the call">
+        <section id="about" class="py-20 border-y border-white/10 bg-navy/45">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid lg:grid-cols-2 gap-10 items-center">
-                    <div>
-                        <p class="text-primary font-bold uppercase tracking-wider text-sm">The free call</p>
-                        <h2 class="text-3xl md:text-4xl font-extrabold mt-3 mb-4">A focused 30 minutes. No pitch marathon.</h2>
-                        <p class="text-lg text-slate-600 mb-6">The goal is simple: understand where you are, find the biggest constraint on consistent results, and tell you honestly whether the coaching program is the right fix.</p>
-                        <a href="#book" data-book-call class="inline-block bg-secondary hover:bg-yellow-500 text-dark font-extrabold py-3 px-7 rounded-xl transition duration-300">Pick a time</a>
-                    </div>
-                    <div class="bg-slate-50 rounded-2xl border border-slate-200 p-7 shadow-sm">
-                        <ol class="space-y-5">
-                            <li class="flex gap-4">
-                                <span class="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 text-primary font-bold flex items-center justify-center">1</span>
-                                <div>
-                                    <h3 class="font-bold">Review where you are today</h3>
-                                    <p class="text-slate-600">Experience, capital, time available, current strategy, and what “working” would look like for you.</p>
-                                </div>
-                            </li>
-                            <li class="flex gap-4">
-                                <span class="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 text-primary font-bold flex items-center justify-center">2</span>
-                                <div>
-                                    <h3 class="font-bold">Identify the real bottleneck</h3>
-                                    <p class="text-slate-600">Usually it’s sizing, structure selection, exits, or review — not “finding better trades”.</p>
-                                </div>
-                            </li>
-                            <li class="flex gap-4">
-                                <span class="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 text-primary font-bold flex items-center justify-center">3</span>
-                                <div>
-                                    <h3 class="font-bold">Map the next step</h3>
-                                    <p class="text-slate-600">If Options Trading Mastery fits, I’ll explain how. If it doesn’t, you still leave with a plan.</p>
-                                </div>
-                            </li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="py-16 bg-slate-50">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid md:grid-cols-5 gap-12 items-center">
-                    <div class="md:col-span-2 flex justify-center">
-                        <div class="relative">
-                            <img src="images/mb_london_eye.jpg" alt="Matthias Bouquet, PhD" class="rounded-xl shadow-xl w-full max-w-md" width="640" height="800" loading="lazy" decoding="async">
-                            <div class="absolute -top-4 -right-4 bg-white p-3 rounded-lg shadow-lg border-2 border-primary">
-                                <img src="images/jpmorgan.png" alt="JP Morgan, former employer" class="h-8" loading="lazy" decoding="async">
+                <div class="grid lg:grid-cols-12 gap-10 items-center">
+                    <div class="lg:col-span-5">
+                        <div class="relative max-w-md mx-auto">
+                            <div class="absolute -inset-4 rounded-[2rem] bg-secondary/15 blur-2xl"></div>
+                            <img src="images/mb_london_eye.jpg" alt="Matthias Bouquet, PhD" class="relative rounded-[1.6rem] w-full border border-white/15 shadow-2xl" width="640" height="800" loading="lazy" decoding="async">
+                            <div class="absolute -top-4 -right-4 bg-white rounded-xl px-4 py-3 shadow-xl border border-slate-200">
+                                <img src="images/jpmorgan.png" alt="JP Morgan, former employer" class="h-7" loading="lazy" decoding="async">
                             </div>
-                            <div class="absolute -bottom-4 -right-4 bg-secondary p-4 rounded-lg shadow-lg">
-                                <div class="bg-white p-2 rounded">
-                                    <i class="fas fa-graduation-cap text-3xl text-dark" title="PhD in Applied Mathematics" aria-hidden="true"></i>
-                                </div>
+                            <div class="absolute -bottom-5 left-5 glass-card rounded-2xl px-4 py-3">
+                                <p class="text-white font-extrabold">Matthias Bouquet, PhD</p>
+                                <p class="text-xs text-slate-400">Derivatives strategist · coach</p>
                             </div>
                         </div>
                     </div>
-                    <div class="md:col-span-3">
-                        <p class="text-primary font-bold uppercase tracking-wider text-sm">Your coach</p>
-                        <h2 class="text-3xl md:text-4xl font-extrabold mt-3 mb-4">Matthias Bouquet, PhD</h2>
-                        <p class="text-lg text-slate-600 mb-6">I spent 8 years at JP Morgan as a derivatives strategist advising hedge funds, asset managers, and institutional clients — after a PhD in Applied Mathematics and a career across Tokyo, London, and Singapore.</p>
-                        <ul class="space-y-3 mb-8">
-                            <li class="flex items-start"><i class="fas fa-check-circle text-secondary mt-1 mr-3" aria-hidden="true"></i><span><strong>Institutional derivatives strategy</strong>, translated for retail-sized accounts.</span></li>
-                            <li class="flex items-start"><i class="fas fa-check-circle text-secondary mt-1 mr-3" aria-hidden="true"></i><span><strong>Risk-first trading process</strong>: structure, sizing, exits, and review before “signals”.</span></li>
-                            <li class="flex items-start"><i class="fas fa-check-circle text-secondary mt-1 mr-3" aria-hidden="true"></i><span><strong>Published research</strong> in derivatives modelling and trading strategies.</span></li>
-                            <li class="flex items-start"><i class="fas fa-check-circle text-secondary mt-1 mr-3" aria-hidden="true"></i><span><strong>Hands-on coaching</strong> with assignments, trade debriefs, and a personal roadmap.</span></li>
+                    <div class="lg:col-span-7">
+                        <p class="kicker">Authority</p>
+                        <h2 class="text-white text-3xl md:text-5xl font-extrabold mt-4">Learn from someone who advised the people trading size.</h2>
+                        <p class="text-lg text-slate-400 mt-5">I spent 8 years at JP Morgan as a derivatives strategist, advising hedge funds, asset managers, and institutional clients. Before that: a PhD in Applied Mathematics and markets experience across Tokyo, London, and Singapore.</p>
+                        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+                            <div class="glass-card rounded-2xl p-5">
+                                <p class="text-white font-bold">Institutional derivatives strategy</p>
+                                <p class="text-sm text-slate-400 mt-2">Translated for retail-sized accounts without dumbing it down.</p>
+                            </div>
+                            <div class="glass-card rounded-2xl p-5">
+                                <p class="text-white font-bold">Risk-managed trading process</p>
+                                <p class="text-sm text-slate-400 mt-2">Structure, sizing, exits, and review come before “signals”.</p>
+                            </div>
+                            <div class="glass-card rounded-2xl p-5">
+                                <p class="text-white font-bold">Published research</p>
+                                <p class="text-sm text-slate-400 mt-2">Derivatives modelling and trading strategy work used by professionals.</p>
+                            </div>
+                            <div class="glass-card rounded-2xl p-5">
+                                <p class="text-white font-bold">Hands-on coaching</p>
+                                <p class="text-sm text-slate-400 mt-2">Assignments, trade debriefs, and a personal roadmap to independence.</p>
+                            </div>
+                        </div>
+                        <a href="#book" data-book-call class="cta-primary px-7 py-4 mt-8">Book a call with Matthias</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="program" class="py-20">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto">
+                    <p class="kicker">The program</p>
+                    <h2 class="text-white text-3xl md:text-5xl font-extrabold mt-4">Options Trading Mastery</h2>
+                    <p class="text-lg text-slate-400 mt-5">A personalized 8-week coaching program. The roadmap adapts to your experience, capital, and goals — the sequence below is the typical path.</p>
+                </div>
+                <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-5 mt-12">
+                    <div class="glass-card rounded-3xl p-6">
+                        <p class="text-secondary text-xs font-extrabold uppercase tracking-[0.2em]">Weeks 1–2</p>
+                        <h3 class="text-white text-xl font-extrabold mt-3">Foundations + options decoded</h3>
+                        <ul class="mt-4 space-y-2 text-sm text-slate-400">
+                            <li>Market mechanics, calls/puts, multi-leg structures</li>
+                            <li>Probability, payoff analysis, institutional mindset</li>
+                            <li>Pricing, Greeks, IV vs HV, skew — only what matters</li>
+                            <li>Personal blueprint + first demo trades</li>
                         </ul>
-                        <div class="flex flex-col sm:flex-row sm:items-center gap-4">
-                            <a href="#book" data-book-call class="inline-block bg-primary hover:bg-blue-800 text-white font-bold py-3 px-7 rounded-xl transition duration-300 text-center">Book a call with Matthias</a>
-                            <a href="https://www.linkedin.com/in/matthias-bouquet-418805197/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center text-primary font-bold hover:text-blue-800">
-                                <i class="fab fa-linkedin-in mr-2" aria-hidden="true"></i> Verify my background
-                            </a>
+                    </div>
+                    <div class="glass-card rounded-3xl p-6">
+                        <p class="text-secondary text-xs font-extrabold uppercase tracking-[0.2em]">Weeks 3–4</p>
+                        <h3 class="text-white text-xl font-extrabold mt-3">Live process + markets</h3>
+                        <ul class="mt-4 space-y-2 text-sm text-slate-400">
+                            <li>Journaling, entry/exit frameworks, trade debriefs</li>
+                            <li>Margin, capital management, position sizing</li>
+                            <li>Futures mechanics, delta-hedging, correlations</li>
+                            <li>Reading and stress-testing signals</li>
+                        </ul>
+                    </div>
+                    <div class="glass-card rounded-3xl p-6">
+                        <p class="text-secondary text-xs font-extrabold uppercase tracking-[0.2em]">Weeks 5–6</p>
+                        <h3 class="text-white text-xl font-extrabold mt-3">Defined-risk structures</h3>
+                        <ul class="mt-4 space-y-2 text-sm text-slate-400">
+                            <li>Iron condors, butterflies, calendars</li>
+                            <li>Structure selection by expiry, risk, and capital</li>
+                            <li>Institutional risk frameworks and sizing rules</li>
+                            <li>Emotion-proofing before scaling</li>
+                        </ul>
+                    </div>
+                    <div class="glass-card rounded-3xl p-6">
+                        <p class="text-secondary text-xs font-extrabold uppercase tracking-[0.2em]">Weeks 7–8</p>
+                        <h3 class="text-white text-xl font-extrabold mt-3">Advanced + independent</h3>
+                        <ul class="mt-4 space-y-2 text-sm text-slate-400">
+                            <li>Events and earnings: trade them or avoid them</li>
+                            <li>Skew and flies with defined risk</li>
+                            <li>Performance review, checklist, scaling plan</li>
+                            <li>Ongoing support options after week 8</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="fit-check" class="py-20 border-y border-white/10 bg-navy/45">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8" data-fit-check>
+                <div class="text-center max-w-2xl mx-auto">
+                    <p class="kicker">60-second fit check</p>
+                    <h2 class="text-white text-3xl md:text-4xl font-extrabold mt-4">Should you book the call?</h2>
+                    <p class="text-slate-400 mt-4">Answer three questions. You’ll get a direct read — not a sales script.</p>
+                </div>
+                <div class="glass-card rounded-[1.6rem] p-6 md:p-8 mt-10">
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div data-fit-group>
+                            <p class="text-white font-extrabold mb-3">1. Where are you now?</p>
+                            <div class="space-y-2">
+                                <button type="button" class="fit-option" data-fit-question="stage" data-fit-value="new" aria-pressed="false">New to options</button>
+                                <button type="button" class="fit-option" data-fit-question="stage" data-fit-value="inconsistent" aria-pressed="false">Trading, but inconsistent</button>
+                                <button type="button" class="fit-option" data-fit-question="stage" data-fit-value="process" aria-pressed="false">Have a process, want review</button>
+                            </div>
+                        </div>
+                        <div data-fit-group>
+                            <p class="text-white font-extrabold mb-3">2. Capital situation</p>
+                            <div class="space-y-2">
+                                <button type="button" class="fit-option" data-fit-question="capital" data-fit-value="demo" aria-pressed="false">Demo / not funded yet</button>
+                                <button type="button" class="fit-option" data-fit-question="capital" data-fit-value="under-5k" aria-pressed="false">Under $5k</button>
+                                <button type="button" class="fit-option" data-fit-question="capital" data-fit-value="5k-plus" aria-pressed="false">$5k+ and risk-aware</button>
+                            </div>
+                        </div>
+                        <div data-fit-group>
+                            <p class="text-white font-extrabold mb-3">3. Biggest bottleneck</p>
+                            <div class="space-y-2">
+                                <button type="button" class="fit-option" data-fit-question="constraint" data-fit-value="entries" aria-pressed="false">Finding trades</button>
+                                <button type="button" class="fit-option" data-fit-question="constraint" data-fit-value="risk" aria-pressed="false">Risk / sizing</button>
+                                <button type="button" class="fit-option" data-fit-question="constraint" data-fit-value="review" aria-pressed="false">Consistency / review</button>
+                            </div>
                         </div>
                     </div>
+                    <p data-fit-hint class="mt-6 text-sm text-slate-500">Answer all three to get the read.</p>
+                    <div data-fit-result class="hidden mt-8 rounded-2xl border border-secondary/40 bg-secondary/10 p-5 md:p-6">
+                        <p class="text-secondary font-extrabold" data-fit-result-title>Likely fit</p>
+                        <p class="text-slate-200 mt-2" data-fit-result-text>Your bottleneck sounds process-related. The free call will identify whether coaching is the fastest fix or whether you should adjust size, structure, or review first.</p>
+                        <a href="#book" data-book-call class="cta-primary px-6 py-3 mt-5">Book the free portfolio call</a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="program" class="py-16 bg-white">
+        <section id="testimonials" class="py-20">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-12">
-                    <p class="text-primary font-bold uppercase tracking-wider text-sm">The coaching program</p>
-                    <h2 class="text-3xl md:text-4xl font-extrabold mt-3 mb-4">Options Trading Mastery</h2>
-                    <p class="text-lg text-slate-600">A personalized 8-week coaching program for traders who want an institutional-style process. The roadmap below is indicative and adapts to your experience, capital, and goals.</p>
+                <div class="text-center max-w-3xl mx-auto">
+                    <p class="kicker">Proof</p>
+                    <h2 class="text-white text-3xl md:text-5xl font-extrabold mt-4">Skeptical traders. Clear process.</h2>
+                    <p class="text-lg text-slate-400 mt-5">Individual results vary. Trading involves risk of loss — that’s exactly why the process is risk-first.</p>
                 </div>
-                <div class="grid gap-6 md:grid-cols-2">
-                    <div class="bg-slate-50 rounded-2xl border border-slate-200 p-7 hover-grow">
-                        <p class="text-sm font-bold text-secondary uppercase tracking-wider">Weeks 1–2</p>
-                        <h3 class="text-xl font-bold mt-2 mb-3">Foundations + options decoded</h3>
-                        <ul class="list-disc list-inside text-slate-700 space-y-1">
-                            <li>Options market mechanics, calls/puts, multi-leg structures</li>
-                            <li>Institutional mindset, probability, and payoff analysis</li>
-                            <li>Pricing, Greeks, IV vs HV, and skew without the fluff</li>
-                            <li>Your personal trading blueprint and first demo trades</li>
-                        </ul>
-                    </div>
-                    <div class="bg-slate-50 rounded-2xl border border-slate-200 p-7 hover-grow">
-                        <p class="text-sm font-bold text-secondary uppercase tracking-wider">Weeks 3–4</p>
-                        <h3 class="text-xl font-bold mt-2 mb-3">Live process + global markets</h3>
-                        <ul class="list-disc list-inside text-slate-700 space-y-1">
-                            <li>Trade journaling, entry/exit frameworks, and debriefs</li>
-                            <li>Margin requirements, capital management, and sizing</li>
-                            <li>Futures mechanics, delta-hedging, and cross-asset context</li>
-                            <li>How to read and stress-test trading signals</li>
-                        </ul>
-                    </div>
-                    <div class="bg-slate-50 rounded-2xl border border-slate-200 p-7 hover-grow">
-                        <p class="text-sm font-bold text-secondary uppercase tracking-wider">Weeks 5–6</p>
-                        <h3 class="text-xl font-bold mt-2 mb-3">Defined-risk structures + psychology</h3>
-                        <ul class="list-disc list-inside text-slate-700 space-y-1">
-                            <li>Iron condors, butterflies, calendars, and when to use them</li>
-                            <li>Structure selection by expiry, risk, and capital allocation</li>
-                            <li>Institutional-style risk frameworks and trade sizing</li>
-                            <li>Emotion-proofing your process before size increases</li>
-                        </ul>
-                    </div>
-                    <div class="bg-slate-50 rounded-2xl border border-slate-200 p-7 hover-grow">
-                        <p class="text-sm font-bold text-secondary uppercase tracking-wider">Weeks 7–8</p>
-                        <h3 class="text-xl font-bold mt-2 mb-3">Advanced tactics + independence</h3>
-                        <ul class="list-disc list-inside text-slate-700 space-y-1">
-                            <li>Events and earnings: how to trade them, and how not to</li>
-                            <li>Trading skew and flies with defined risk</li>
-                            <li>Performance review, personal checklist, and scaling plan</li>
-                            <li>Ongoing support options after the program</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="mt-10 text-center">
-                    <a href="#book" data-book-call class="inline-block bg-secondary hover:bg-yellow-500 text-dark font-extrabold py-4 px-8 rounded-xl text-lg transition duration-300 shadow-lg shadow-secondary/30">See if the program fits — book the free call</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="testimonials" class="py-16 bg-primary text-white">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-12">
-                    <h2 class="text-3xl md:text-4xl font-extrabold mb-4">What students say</h2>
-                    <p class="text-lg text-slate-300">Real people, real skepticism, real process. Individual results vary — trading involves risk of loss.</p>
-                </div>
-                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
-                        <video controls preload="none" class="w-full rounded-lg" title="Testimonial from Dan B.">
+                <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto mt-12">
+                    <div class="glass-card rounded-3xl p-5">
+                        <video controls preload="none" class="w-full rounded-2xl border border-white/10" title="Testimonial from Dan B.">
                             <source src="videos/testimonial_dan.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
-                        <div class="flex items-center mt-4">
-                            <img class="w-12 h-12 rounded-full mr-4" src="images/dan.png" alt="Dan B." loading="lazy" decoding="async">
+                        <div class="flex items-center mt-5">
+                            <img class="w-12 h-12 rounded-full mr-4 border border-white/20" src="images/dan.png" alt="Dan B." loading="lazy" decoding="async">
                             <div>
-                                <h3 class="font-bold">Dan B.</h3>
+                                <h3 class="text-white font-extrabold">Dan B.</h3>
                                 <div class="flex text-secondary" aria-label="5 out of 5 stars">
                                     <i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i>
                                 </div>
                             </div>
                         </div>
-                        <p class="text-slate-300 italic mt-3">“I wanted to invest my capital but was afraid of making bad decisions.”</p>
+                        <p class="text-slate-300 italic mt-4">“I wanted to invest my capital but was afraid of making bad decisions.”</p>
                     </div>
-                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20">
-                        <video controls preload="none" class="w-full rounded-lg" title="Testimonial from Liam C.">
+                    <div class="glass-card rounded-3xl p-5">
+                        <video controls preload="none" class="w-full rounded-2xl border border-white/10" title="Testimonial from Liam C.">
                             <source src="videos/testimonial_liam.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
-                        <div class="flex items-center mt-4">
-                            <img class="w-12 h-12 rounded-full mr-4" src="images/liam.png" alt="Liam C." loading="lazy" decoding="async">
+                        <div class="flex items-center mt-5">
+                            <img class="w-12 h-12 rounded-full mr-4 border border-white/20" src="images/liam.png" alt="Liam C." loading="lazy" decoding="async">
                             <div>
-                                <h3 class="font-bold">Liam C.</h3>
+                                <h3 class="text-white font-extrabold">Liam C.</h3>
                                 <div class="flex text-secondary" aria-label="5 out of 5 stars">
                                     <i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i>
                                 </div>
                             </div>
                         </div>
-                        <p class="text-slate-300 italic mt-3">“I’ve always been skeptical of online trading ‘gurus’.”</p>
+                        <p class="text-slate-300 italic mt-4">“I’ve always been skeptical of online trading ‘gurus’.”</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="faq" class="py-16 bg-white">
+        <section id="faq" class="py-20 border-y border-white/10 bg-navy/45">
             <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Questions before you book</h2>
-                    <p class="text-lg text-slate-600">Straight answers. If yours isn’t here, bring it to the call.</p>
+                <div class="text-center mb-10">
+                    <p class="kicker">Objections</p>
+                    <h2 class="text-white text-3xl md:text-4xl font-extrabold mt-4">Questions before you book</h2>
                 </div>
-                <div class="space-y-6">
+                <div class="space-y-4">
                     <div class="faq-item">
-                        <button type="button" class="faq-question flex w-full justify-between items-center text-left" data-faq-button aria-expanded="false" aria-controls="faq-answer-1">
-                            <span class="text-lg font-bold">What actually happens on the free call?</span>
-                            <i class="fas fa-chevron-down text-primary shrink-0 ml-2" data-faq-icon aria-hidden="true"></i>
+                        <button type="button" class="faq-question flex w-full justify-between items-center text-left p-5" data-faq-button aria-expanded="false" aria-controls="faq-answer-1">
+                            <span class="text-white font-extrabold">What actually happens on the free call?</span>
+                            <i class="fas fa-chevron-down text-secondary shrink-0 ml-3" data-faq-icon aria-hidden="true"></i>
                         </button>
-                        <div class="faq-answer mt-2 text-slate-600" id="faq-answer-1" role="region">
-                            <p>We review your experience, capital, goals, and current approach. Then I’ll point out the biggest constraint on consistent results and tell you whether the 8-week program is a fit. If it isn’t, you still leave with a concrete next step.</p>
+                        <div class="faq-answer px-5 text-slate-400" id="faq-answer-1" role="region">
+                            <p class="pb-5">We review your experience, capital, goals, and current approach. Then I’ll identify the biggest constraint on consistent results and tell you whether the 8-week program is a fit. If it isn’t, you still leave with a concrete next step.</p>
                         </div>
                     </div>
                     <div class="faq-item">
-                        <button type="button" class="faq-question flex w-full justify-between items-center text-left" data-faq-button aria-expanded="false" aria-controls="faq-answer-2">
-                            <span class="text-lg font-bold">Is this suitable for beginners?</span>
-                            <i class="fas fa-chevron-down text-primary shrink-0 ml-2" data-faq-icon aria-hidden="true"></i>
+                        <button type="button" class="faq-question flex w-full justify-between items-center text-left p-5" data-faq-button aria-expanded="false" aria-controls="faq-answer-2">
+                            <span class="text-white font-extrabold">Is this suitable for beginners?</span>
+                            <i class="fas fa-chevron-down text-secondary shrink-0 ml-3" data-faq-icon aria-hidden="true"></i>
                         </button>
-                        <div class="faq-answer mt-2 text-slate-600" id="faq-answer-2" role="region">
-                            <p>Yes, if you’re willing to do the work. The first two weeks rebuild foundations and options pricing properly, then you move into demo and live-structured trades with risk rules. More advanced traders skip the remedial parts and go straight to structure, sizing, and review.</p>
+                        <div class="faq-answer px-5 text-slate-400" id="faq-answer-2" role="region">
+                            <p class="pb-5">Yes, if you’re willing to do the work. The first two weeks rebuild foundations and options pricing properly, then you move into structured trades with risk rules. Advanced traders skip the remedial parts and go straight to structure, sizing, and review.</p>
                         </div>
                     </div>
                     <div class="faq-item">
-                        <button type="button" class="faq-question flex w-full justify-between items-center text-left" data-faq-button aria-expanded="false" aria-controls="faq-answer-3">
-                            <span class="text-lg font-bold">How much capital do I need?</span>
-                            <i class="fas fa-chevron-down text-primary shrink-0 ml-2" data-faq-icon aria-hidden="true"></i>
+                        <button type="button" class="faq-question flex w-full justify-between items-center text-left p-5" data-faq-button aria-expanded="false" aria-controls="faq-answer-3">
+                            <span class="text-white font-extrabold">How much capital do I need?</span>
+                            <i class="fas fa-chevron-down text-secondary shrink-0 ml-3" data-faq-icon aria-hidden="true"></i>
                         </button>
-                        <div class="faq-answer mt-2 text-slate-600" id="faq-answer-3" role="region">
-                            <p>You can learn the process on a demo account. To implement the defined-risk options strategies properly, around $5,000 is a practical minimum; position sizing is adapted to your account and risk tolerance.</p>
+                        <div class="faq-answer px-5 text-slate-400" id="faq-answer-3" role="region">
+                            <p class="pb-5">You can learn the process on a demo account. To implement the defined-risk options strategies properly, around $5,000 is a practical minimum; position sizing is adapted to your account and risk tolerance.</p>
                         </div>
                     </div>
                     <div class="faq-item">
-                        <button type="button" class="faq-question flex w-full justify-between items-center text-left" data-faq-button aria-expanded="false" aria-controls="faq-answer-4">
-                            <span class="text-lg font-bold">How is this different from other trading educators?</span>
-                            <i class="fas fa-chevron-down text-primary shrink-0 ml-2" data-faq-icon aria-hidden="true"></i>
+                        <button type="button" class="faq-question flex w-full justify-between items-center text-left p-5" data-faq-button aria-expanded="false" aria-controls="faq-answer-4">
+                            <span class="text-white font-extrabold">How is this different from other trading educators?</span>
+                            <i class="fas fa-chevron-down text-secondary shrink-0 ml-3" data-faq-icon aria-hidden="true"></i>
                         </button>
-                        <div class="faq-answer mt-2 text-slate-600" id="faq-answer-4" role="region">
-                            <p>The framework comes from institutional derivatives strategy, not indicator stacks or get-rich-quick marketing. The focus is risk-adjusted returns: defined-risk structures, sizing, debriefs, and a review process you can repeat without me.</p>
+                        <div class="faq-answer px-5 text-slate-400" id="faq-answer-4" role="region">
+                            <p class="pb-5">The framework comes from institutional derivatives strategy, not indicator stacks or get-rich-quick marketing. The focus is risk-adjusted decision-making: defined-risk structures, sizing, debriefs, and a review process you can repeat without me.</p>
                         </div>
                     </div>
                     <div class="faq-item">
-                        <button type="button" class="faq-question flex w-full justify-between items-center text-left" data-faq-button aria-expanded="false" aria-controls="faq-answer-5">
-                            <span class="text-lg font-bold">Is this investment advice?</span>
-                            <i class="fas fa-chevron-down text-primary shrink-0 ml-2" data-faq-icon aria-hidden="true"></i>
+                        <button type="button" class="faq-question flex w-full justify-between items-center text-left p-5" data-faq-button aria-expanded="false" aria-controls="faq-answer-5">
+                            <span class="text-white font-extrabold">Is this investment advice?</span>
+                            <i class="fas fa-chevron-down text-secondary shrink-0 ml-3" data-faq-icon aria-hidden="true"></i>
                         </button>
-                        <div class="faq-answer mt-2 text-slate-600" id="faq-answer-5" role="region">
-                            <p>No. This is education and coaching. Trading involves substantial risk and is not suitable for every investor; past performance does not guarantee future results.</p>
+                        <div class="faq-answer px-5 text-slate-400" id="faq-answer-5" role="region">
+                            <p class="pb-5">No. This is education and coaching. Trading involves substantial risk and is not suitable for every investor; past performance does not guarantee future results.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="book" class="py-16 bg-slate-50">
+        <section id="book" class="py-20">
             <span id="contact" class="legacy-anchor" aria-hidden="true"></span>
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="bg-white rounded-2xl overflow-hidden shadow-xl border border-slate-200">
-                    <div class="bg-primary text-white text-center p-8">
-                        <h2 class="text-3xl font-extrabold">Pick a time for your free portfolio call</h2>
-                        <p class="text-slate-200 mt-2">30 minutes with Matthias Bouquet. Video or phone. No cost, no obligation.</p>
+                <div class="bg-white rounded-[1.6rem] overflow-hidden shadow-2xl border border-white/10">
+                    <div class="bg-gradient-to-r from-primary to-navy text-white text-center p-8 md:p-10">
+                        <p class="text-secondary text-xs font-extrabold uppercase tracking-[0.22em]">Final step</p>
+                        <h2 class="text-3xl md:text-4xl font-extrabold mt-3">Pick a time for your free portfolio call</h2>
+                        <p class="text-slate-200 mt-3">30 minutes with Matthias Bouquet. Video or phone. No cost, no obligation.</p>
                     </div>
                     <div class="p-4 sm:p-6">
                         <div class="calendly-wrap">
@@ -549,8 +634,8 @@
                             </div>
                         </div>
                         <div id="guide" class="mt-6 text-center text-sm text-slate-500">
-                            Not ready for a call?
-                            <a href="documents/options_trading_mastery.pdf" download class="font-bold text-primary hover:text-blue-800 underline underline-offset-2">Download the free Options Trading Mastery primer</a>
+                            Rather read first?
+                            <a href="documents/options_trading_mastery.pdf" download class="font-bold text-primary hover:text-blue-800 underline underline-offset-2">Download the free primer</a>
                         </div>
                     </div>
                 </div>
@@ -559,47 +644,31 @@
         </section>
     </main>
 
-    <footer class="bg-dark text-white py-12">
+    <footer class="border-t border-white/10 bg-black/30 py-10">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-3 gap-8">
-                <div>
-                    <div class="flex items-center mb-4">
-                        <img src="images/hfs_logo_inv_rmv.png" alt="Hedge Fund Secrets Logo" class="h-12 mr-3" loading="lazy" decoding="async">
-                        <span class="text-white font-semibold text-lg uppercase tracking-wider">Hedge Fund Secrets</span>
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                <div class="flex items-center gap-3">
+                    <img src="images/hfs_logo_inv_rmv.png" alt="Hedge Fund Secrets" class="h-9 w-auto" loading="lazy" decoding="async">
+                    <div>
+                        <p class="text-white font-extrabold uppercase tracking-[0.18em] text-sm">Hedge Fund Secrets</p>
+                        <p class="text-xs text-slate-500">Risk-first options trading education.</p>
                     </div>
-                    <p class="text-slate-400 mb-4">Institutional-grade options trading education, built around risk management and process.</p>
-                    <a href="https://www.linkedin.com/in/matthias-bouquet-418805197/" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin text-xl" aria-hidden="true"></i>
-                    </a>
                 </div>
-                <div>
-                    <h3 class="text-lg font-bold mb-4">Page</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#about" class="text-slate-400 hover:text-white">About</a></li>
-                        <li><a href="#program" class="text-slate-400 hover:text-white">Program</a></li>
-                        <li><a href="#testimonials" class="text-slate-400 hover:text-white">Testimonials</a></li>
-                        <li><a href="#book" data-book-call class="text-slate-400 hover:text-white">Book a Call</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-bold mb-4">Legal</h3>
-                    <ul class="space-y-2">
-                        <li><a href="pages/disclaimer.html" class="text-slate-400 hover:text-white">Disclaimer</a></li>
-                        <li><a href="pages/privacy-policy.html" class="text-slate-400 hover:text-white">Privacy Policy</a></li>
-                        <li><a href="pages/terms.html" class="text-slate-400 hover:text-white">Terms of Service</a></li>
-                        <li><a href="pages/refund-policy.html" class="text-slate-400 hover:text-white">Refund Policy</a></li>
-                    </ul>
+                <div class="flex flex-wrap gap-x-5 gap-y-2 text-sm text-slate-500">
+                    <a href="pages/disclaimer.html" class="hover:text-slate-300">Disclaimer</a>
+                    <a href="pages/privacy-policy.html" class="hover:text-slate-300">Privacy</a>
+                    <a href="pages/terms.html" class="hover:text-slate-300">Terms</a>
+                    <a href="pages/refund-policy.html" class="hover:text-slate-300">Refunds</a>
                 </div>
             </div>
-            <div class="border-t border-slate-800 mt-12 pt-8 text-center text-slate-400">
-                <p>© 2026 Hedge Fund Secrets. All rights reserved.</p>
-                <p class="mt-2 text-sm">This is not investment advice. Trading involves risk of loss.</p>
+            <div class="mt-8 pt-6 border-t border-white/10 text-center text-xs text-slate-600">
+                <p>© 2026 Hedge Fund Secrets. All rights reserved. This is not investment advice. Trading involves risk of loss.</p>
             </div>
         </div>
     </footer>
 
     <div class="sticky-cta md:hidden">
-        <a href="#book" data-book-call class="block w-full bg-secondary hover:bg-yellow-500 text-dark font-extrabold py-3 px-6 rounded-xl text-center transition duration-300">Book Your Free Portfolio Call</a>
+        <a href="#book" data-book-call class="cta-primary w-full py-3.5">Book Your Free Portfolio Call</a>
     </div>
 
     <script src="js/site.js" defer></script>

@@ -3,6 +3,7 @@
     var VIMEO_ID = '1195020310';
     var calendlyLoaded = false;
     var leadTracked = false;
+    var fitTracked = false;
 
     function ready(fn) {
         if (document.readyState === 'loading') {
@@ -18,6 +19,15 @@
             window.fbq('track', eventName, params);
         } else {
             window.fbq('track', eventName);
+        }
+    }
+
+    function trackMetaCustom(eventName, params) {
+        if (typeof window.fbq !== 'function') return;
+        if (params) {
+            window.fbq('trackCustom', eventName, params);
+        } else {
+            window.fbq('trackCustom', eventName);
         }
     }
 
@@ -98,6 +108,57 @@
                     icon.classList.remove('fa-chevron-up');
                     icon.classList.add('fa-chevron-down');
                 }
+            }
+        });
+    }
+
+    function initFitCheck() {
+        var widget = document.querySelector('[data-fit-check]');
+        if (!widget) return;
+
+        var answers = {};
+        var result = widget.querySelector('[data-fit-result]');
+        var title = widget.querySelector('[data-fit-result-title]');
+        var text = widget.querySelector('[data-fit-result-text]');
+        var hint = widget.querySelector('[data-fit-hint]');
+
+        widget.addEventListener('click', function (e) {
+            var button = e.target.closest('[data-fit-question]');
+            if (!button || !widget.contains(button)) return;
+
+            var question = button.getAttribute('data-fit-question');
+            answers[question] = button.getAttribute('data-fit-value');
+
+            var group = button.closest('[data-fit-group]');
+            if (group) {
+                group.querySelectorAll('[data-fit-question]').forEach(function (option) {
+                    var selected = option === button;
+                    option.classList.toggle('is-selected', selected);
+                    option.setAttribute('aria-pressed', String(selected));
+                });
+            }
+
+            if (!result || !title || !text || Object.keys(answers).length < 3) return;
+
+            var undercapitalized = answers.capital === 'demo' || answers.capital === 'under-5k';
+            var processPain = answers.constraint === 'risk' || answers.constraint === 'review' || answers.stage === 'inconsistent';
+
+            if (undercapitalized) {
+                title.textContent = 'A call can help — coaching may be premature';
+                text.textContent = 'If you are still demo-only or under $5k, the call should focus on the roadmap and risk rules to reach the right size safely. Book if you want that plan; I’ll be direct if the full program is not the next step yet.';
+            } else if (processPain) {
+                title.textContent = 'Strong fit for a portfolio call';
+                text.textContent = 'Your bottleneck sounds process-related: risk, sizing, structure, or review. That is exactly what the free call is built to diagnose before you commit to anything.';
+            } else {
+                title.textContent = 'Likely fit — with one caveat';
+                text.textContent = 'If the main issue is “finding more trades”, the call will probably reframe the problem around selection, risk, and review. Book if you want the institutional version of that fix.';
+            }
+
+            result.classList.remove('hidden');
+            if (hint) hint.classList.add('hidden');
+            if (!fitTracked) {
+                fitTracked = true;
+                trackMetaCustom('FitCheckCompleted', { content_name: 'Portfolio Call Fit Check' });
             }
         });
     }
@@ -216,6 +277,7 @@
         initMobileMenu();
         initSmoothScroll();
         initFaq();
+        initFitCheck();
         initVimeoFacade();
         initMetaTracking();
         scheduleCalendly();
