@@ -144,14 +144,14 @@
             var processPain = answers.constraint === 'risk' || answers.constraint === 'review' || answers.stage === 'inconsistent';
 
             if (undercapitalized) {
-                title.textContent = 'A call can help — coaching may be premature';
-                text.textContent = 'If you are still demo-only or under $5k, the call should focus on the roadmap and risk rules to reach the right size safely. Book if you want that plan; I’ll be direct if the full program is not the next step yet.';
+                title.textContent = 'Book the call if you want a safe roadmap';
+                text.textContent = 'If you’re still building capital, forcing size is how confidence gets destroyed again. The call will map the risk rules and milestones to reach the right size without gambling — and I’ll tell you if coaching should wait.';
             } else if (processPain) {
-                title.textContent = 'Strong fit for a portfolio call';
-                text.textContent = 'Your bottleneck sounds process-related: risk, sizing, structure, or review. That is exactly what the free call is built to diagnose before you commit to anything.';
+                title.textContent = 'This is exactly what the call is for';
+                text.textContent = 'If losses have made you hesitant, inconsistent, or afraid of the next click, the fix is not another setup. It’s a process where the loss is defined before entry and reviewed without shame afterward.';
             } else {
-                title.textContent = 'Likely fit — with one caveat';
-                text.textContent = 'If the main issue is “finding more trades”, the call will probably reframe the problem around selection, risk, and review. Book if you want the institutional version of that fix.';
+                title.textContent = 'Likely fit — but we’ll challenge the goal';
+                text.textContent = 'If the main urge is “find more trades”, the call will reframe that toward the portfolio you actually want: fewer decisions, clearer risk, and a review loop you can trust.';
             }
 
             result.classList.remove('hidden');
