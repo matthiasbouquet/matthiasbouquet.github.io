@@ -174,7 +174,7 @@
             trackMeta('ViewContent', { content_name: 'Trading Briefing Video' });
 
             var iframe = document.createElement('iframe');
-            iframe.src = 'https://player.vimeo.com/video/' + VIMEO_ID + '?autoplay=1&badge=0&autopause=0&player_id=0&app_id=58479';
+            iframe.src = 'https://player.vimeo.com/video/' + VIMEO_ID + '?autoplay=1&badge=0&autopause=0&player_id=0&app_id=122963';
             iframe.allow = 'autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share';
             iframe.referrerPolicy = 'strict-origin-when-cross-origin';
             iframe.title = 'How experts actually view trading, by an ex-JP Morgan senior executive';
