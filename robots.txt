@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hedge-fund-secrets.com/sitemap.xml
