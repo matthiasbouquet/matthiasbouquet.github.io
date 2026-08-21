@@ -121,6 +121,7 @@
         var title = widget.querySelector('[data-fit-result-title]');
         var text = widget.querySelector('[data-fit-result-text]');
         var hint = widget.querySelector('[data-fit-hint]');
+        var cta = widget.querySelector('[data-fit-cta]');
 
         widget.addEventListener('click', function (e) {
             var button = e.target.closest('[data-fit-question]');
@@ -140,18 +141,53 @@
 
             if (!result || !title || !text || Object.keys(answers).length < 3) return;
 
-            var undercapitalized = answers.capital === 'demo' || answers.capital === 'under-5k';
-            var processPain = answers.constraint === 'risk' || answers.constraint === 'review' || answers.stage === 'inconsistent';
+            var resTitle = '';
+            var resText = '';
+            var ctaText = 'Book the free portfolio call';
+            var ctaHref = '#book';
 
-            if (undercapitalized) {
-                title.textContent = 'Book the call if you want a safe roadmap';
-                text.textContent = 'If you’re still building capital, forcing size is how confidence gets destroyed again. The call will map the risk rules and milestones to reach the right size without gambling — and I’ll tell you if coaching should wait.';
-            } else if (processPain) {
-                title.textContent = 'This is exactly what the call is for';
-                text.textContent = 'If losses have made you hesitant, inconsistent, or afraid of the next click, the fix is not another setup. It’s a process where the loss is defined before entry and reviewed without shame afterward.';
+            if (answers.capital === 'demo') {
+                resTitle = 'Coaching Not Suitable At This Time';
+                resText = 'This coaching program is designed for live portfolio execution and requires disposable risk capital to implement institutional options strategies properly. I do not make unrealistic promises of multiplying small accounts or turning demo money into wealth overnight without risk. You are welcome to watch the video briefing to learn the core principles, but 1-on-1 coaching should wait until you have dedicated capital ready.';
+                ctaText = 'Watch the Video Briefing';
+                ctaHref = '#top';
+            } else if (answers.capital === 'under-5k') {
+                resTitle = 'Proceed with Caution — Capital Considerations';
+                resText = 'Executing defined-risk institutional options strategies is most practical with at least $5,000 in risk capital. While you can learn the methodology on a smaller account, proper position sizing requires discipline. On the call, we can evaluate whether coaching makes sense for your situation or if capital accumulation should come first.';
+                ctaText = 'Book a Call to Evaluate Fit';
+                ctaHref = '#book';
+            } else if (answers.stage === 'new') {
+                resTitle = 'Strong Fit — Demystifying Options';
+                resText = 'You have the capital ready, but options feel overwhelming because social media hype makes them sound like high-risk gambling. My 8-week program replaces confusion with clear, structured probabilities and strict risk rules so you can grow your wealth calmly.';
+                ctaText = 'Book Your Free Portfolio Call';
+                ctaHref = '#book';
+            } else if (answers.stage === 'inconsistent' || answers.constraint === 'risk') {
+                resTitle = 'Ideal Fit — Rebuilding Confidence & Risk Control';
+                resText = 'You have capital to trade, but previous bad trades or undefined risk have damaged your confidence. Institutional trading isn\'t about predicting market directions — it\'s about strict position sizing so no single trade ever hurts your account or peace of mind.';
+                ctaText = 'Book Your Free Portfolio Call';
+                ctaHref = '#book';
+            } else if (answers.stage === 'process' || answers.constraint === 'review') {
+                resTitle = 'Ideal Fit — Process & Efficiency';
+                resText = 'Trading shouldn\'t feel like a second full-time job or a source of constant stress. With an institutional statistical edge and defined exit rules, you can manage a high-performing portfolio in just a few hours a week. Let\'s refine your execution.';
+                ctaText = 'Book Your Free Portfolio Call';
+                ctaHref = '#book';
+            } else if (answers.constraint === 'entries') {
+                resTitle = 'Ideal Fit — Overcoming Decision Paralysis';
+                resText = 'Hesitation comes from not knowing your exact risk and edge before clicking "buy". When your entry, exit, and max loss are mathematically defined before every trade, execution becomes mechanical and anxiety vanishes.';
+                ctaText = 'Book Your Free Portfolio Call';
+                ctaHref = '#book';
             } else {
-                title.textContent = 'Likely fit — but we’ll challenge the goal';
-                text.textContent = 'If the main urge is “find more trades”, the call will reframe that toward the portfolio you actually want: fewer decisions, clearer risk, and a review loop you can trust.';
+                resTitle = 'Strong Fit — Tailored Strategy Call';
+                resText = 'Your answers indicate you\'re in a great position to benefit from a structured, institutional options approach. On the free call, we\'ll review your goals and map out a clear, repeatable system tailored to your portfolio.';
+                ctaText = 'Book Your Free Portfolio Call';
+                ctaHref = '#book';
+            }
+
+            title.textContent = resTitle;
+            text.textContent = resText;
+            if (cta) {
+                cta.textContent = ctaText;
+                cta.setAttribute('href', ctaHref);
             }
 
             result.classList.remove('hidden');
