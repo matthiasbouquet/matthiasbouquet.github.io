@@ -37,9 +37,24 @@
             if (!e.data || typeof e.data.event !== 'string') return;
             if (e.data.event.indexOf('calendly.') !== 0) return;
 
+            if (e.data.event === 'calendly.date_and_time_selected') {
+                trackMeta('InitiateCheckout', {
+                    content_name: 'Calendly Date Selected',
+                    content_category: 'Portfolio Call Booking'
+                });
+            }
+
             if (e.data.event === 'calendly.event_scheduled' && !leadTracked) {
                 leadTracked = true;
-                trackMeta('Lead', { content_name: 'Portfolio Call Booking' });
+                trackMeta('Schedule', {
+                    content_name: 'Portfolio Call Scheduled',
+                    status: 'confirmed'
+                });
+                trackMeta('Lead', {
+                    content_name: 'Portfolio Call Scheduled',
+                    currency: 'USD',
+                    value: 0.00
+                });
             }
         });
     }
@@ -194,7 +209,16 @@
             if (hint) hint.classList.add('hidden');
             if (!fitTracked) {
                 fitTracked = true;
-                trackMetaCustom('FitCheckCompleted', { content_name: 'Portfolio Call Fit Check' });
+                trackMeta('SubmitApplication', {
+                    content_name: 'Portfolio Call Fit Check',
+                    status: answers.capital
+                });
+                trackMetaCustom('FitCheckCompleted', {
+                    content_name: 'Portfolio Call Fit Check',
+                    capital: answers.capital,
+                    stage: answers.stage,
+                    constraint: answers.constraint
+                });
             }
         });
     }
@@ -207,7 +231,11 @@
         facade.addEventListener('click', function () {
             if (container.querySelector('iframe')) return;
             facade.remove();
-            trackMeta('ViewContent', { content_name: 'Trading Briefing Video' });
+            trackMeta('ViewContent', {
+                content_name: 'Options Trading Briefing Video',
+                content_category: 'Video Briefing',
+                content_type: 'product'
+            });
 
             var iframe = document.createElement('iframe');
             iframe.src = 'https://player.vimeo.com/video/' + VIMEO_ID + '?autoplay=1&badge=0&autopause=0&player_id=0&app_id=122963';
@@ -270,10 +298,12 @@
 
     function scheduleCalendly() {
         var book = document.getElementById('book');
-        if (!book) return;
 
         document.querySelectorAll('[data-book-call], a[href="#book"], a[href="#contact"]').forEach(function (el) {
-            el.addEventListener('click', loadCalendly);
+            el.addEventListener('click', function () {
+                loadCalendly();
+                trackMeta('Contact', { content_name: 'Book Call CTA Click' });
+            });
         });
 
         if (!('IntersectionObserver' in window)) {
